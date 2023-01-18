@@ -1,0 +1,10 @@
+header
+{
+    display: grid;
+    grid-template-rows: 1,1,1;
+}
+Aktiviteter
+{
+    text-decoration: none;
+    grid-row: 1;
+}
