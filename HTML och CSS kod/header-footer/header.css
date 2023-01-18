@@ -1,0 +1,29 @@
+#Mainheader{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    justify-items: center;
+}
+ul{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    font-size: 4.2em;
+    color: black;
+}
+a:active {
+    text-decoration: none;
+}
+#Aktiviteter{
+    grid-row: 1;
+    padding-bottom: 1em;
+}
+#Vecka{
+    grid-row: 2;
+}
+#Månad{
+    grid-row: 3;
+}
+
