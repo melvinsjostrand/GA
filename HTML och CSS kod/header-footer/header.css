@@ -25,5 +25,6 @@ a:active {
 }
 #Månad{
     grid-row: 3;
+    padding-bottom: 1em;
 }
 
