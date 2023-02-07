@@ -28,6 +28,10 @@ a:active {
     padding-bottom: 1em;
 }
 
+nav ul{
+    list-style-type: none;
+}
+
 @media only screen and (min-width: 820px) {
     a {
         font-size: 3.9em;

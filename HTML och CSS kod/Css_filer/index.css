@@ -28,9 +28,7 @@ main {
     gap: 2em;
     font-size: 2em;
 }
-nav ul{
-    list-style-type: none;
-}
+
 section{
     border-width: 2em;
     border-radius: 50px;
