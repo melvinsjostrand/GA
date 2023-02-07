@@ -22,38 +22,77 @@ main h2 , h3{
 main h2{
     font-size: 3em;
 }
-.maingrid{
-    grid-template-columns: 1fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: auto auto auto;
-    display:grid;
-}
+
 h4{
     text-align: center;
 }
+
+section{
+    margin-bottom: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 div{
 
     border-width: 2px;
-    background-color: green;
     width: 100%;
-    height: 100%;
+    height: 200%;
 }
-section{
-    margin-left: 20px;
-    margin-right: 10px;
-}
+
+
 img{
+margin-top: 50px;
 width: 5em;
 height: 7em;
 }
+
 .image1{
     transform: rotate(180deg);
     grid-row:3/4;
 }
+
+
+
+
+
+
+
+
+div.Måndag{
+    background-color: rgb(146,209,79);
+}
+div.Tisdag{
+    background-color:rgb(146,205,219);
+}
+div.Onsdag{
+    background-color:rgb(254,254,254);
+}
+div.Torsdag{
+    background-color:rgb(200,143,88);
+}
+
+div.Fredag{
+     background-color:rgb(254,254,108);
+}
+div.Lördag{
+     background-color:rgb(249,167,215);
+}
+div.Söndag{
+     background-color:rgb(214,81,86);
+}
+
 @media only screen and (min-width: 860px){
     header nav{
         margin-left: 120px;
         margin-right: 120px;
     }
+    .maingrid{
+        grid-template-columns: 1fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 1fr;
+        grid-template-rows: auto auto auto;
+        display:grid;
+    }
+
 
 }
 @media only screen and (max-width: 860px){
@@ -63,14 +102,44 @@ height: 7em;
     }
     section{
         text-align: center;
-        background-color: green;
     }
-    .maingrid{
-        grid-template-columns: 1fr;
-        grid-row:1fr;
-    }
+
     .image2{
     float: right;
     }
 
+
+    section{
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+
+
+
+
+
+    section.Måndag{
+        background-color: rgb(146,209,79);
+    }
+    section.Tisdag{
+        background-color:rgb(146,205,219);
+    }
+    section.Onsdag{
+        background-color:rgb(254,254,254);
+    }
+    section.Torsdag{
+        background-color:rgb(200,143,88);
+    }
+    
+    section.Fredag{
+         background-color:rgb(254,254,108);
+    }
+    section.Lördag{
+         background-color:rgb(249,167,215);
+    }
+    section.Söndag{
+         background-color:rgb(214,81,86);
+    }
 }
