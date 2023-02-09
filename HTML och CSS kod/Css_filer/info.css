@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5rem;
   }
 
 .form2 {
@@ -9,6 +10,7 @@
   justify-content: center;
   align-items: center;
   font-size: 200px b;
+  margin-left: 13rem;
 }
   
   input[type="datetime-local"] {
@@ -49,28 +51,26 @@
     cursor: pointer;
   }
 
-  #fname {
-padding-right: 20em;
-padding-bottom: 30em;
-resize: both;
-overflow: auto;
+      #fname {
+    padding-right: 20em;
+    padding-bottom: 30em;
+    resize: both;
+    overflow: auto;
+    background-color: #e4e4e4
   }
 
   #fbutton {
     margin-left: 2rem;
     margin-top: 28rem;
+    background-color: #e4e4e4;
+    font-size: 2em;
+
   }
 
   .Tillbaka {
-    margin-top: 2em;
     margin-left: 2em;
-    background-color: rgb(202, 202, 202);
+    background-color: #e4e4e4;
     text-decoration: none;
     color: black;
-    font-size: 5em;
-  }
-
-
-  .grid{
-
+    font-size: 2.5em;
   }
