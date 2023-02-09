@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css_filer/info.css">
+    <link rel="stylesheet" href="./JS/Datum.js">
     <title>Informationsida</title>
+
 </head>
 <body>
-
-    <button class="Tillbaka">Tillbaka</button>    
+    <header>
+        <a class="Tillbaka" href="Vecka.html">Tillbaka</a>    
+    </header>
+<main>
+   
     <form class="form">
       <input type="datetime-local" id="datetime">
       <button type="button" onclick="displayDateTime()">Submit</button>
@@ -17,12 +23,12 @@
 	<div class="info" id="info"></div>
 
 	<form class="form2">
-		<input type="text" id="fname" name="fname" value=""><br>
+		<input type="text" id="fname" name="fname" placeholder="Skriv infomartion om aktivit " value=""><br>
 		<input type="submit" id="fbutton" value="Ladda Upp">
 	  </form> 
 
     
     <script src="Datum.js"></script>
-    
+</main>
 </body>
 </html>

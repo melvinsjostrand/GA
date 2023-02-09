@@ -50,8 +50,10 @@
   }
 
   #fname {
-    height: 30rem;
-    width: 40rem;
+padding-right: 20em;
+padding-bottom: 30em;
+resize: both;
+overflow: auto;
   }
 
   #fbutton {
@@ -60,7 +62,15 @@
   }
 
   .Tillbaka {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    
+    margin-top: 2em;
+    margin-left: 2em;
+    background-color: rgb(202, 202, 202);
+    text-decoration: none;
+    color: black;
+    font-size: 5em;
+  }
+
+
+  .grid{
+
   }
