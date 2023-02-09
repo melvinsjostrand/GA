@@ -1,13 +1,27 @@
 :root {
     --web--color:rgb(237, 237, 237);
+    --color--circle: rgb(0, 0, 0);
 }
 
 body {
     background-color: var(--web--color);
 }
-main {
-    display: grid;
-    grid-auto-rows: auto 3fr
+main div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  wrap;
+}
+
+section {
+    margin: 5px;
+}
+p{
+    border: solid;
+    border-color: var(--color--circle);
+    border-radius: 50%;
+    font-size: 2em;
+    padding: 10px;
+    margin: 0;
 }
 
 h2 {
@@ -16,34 +30,37 @@ h2 {
     text-align: center;
 }
 
-#kalender {
+.pil {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.nästavecka{
+    width: 40%;
+    transform: rotate(180deg);
+}
+.föravecka {
+    width: 40%;
+    justify-self: end;
 }
 
-.circle {
+/* #kalender {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+} */
+
+/* .circle {
     height: 80%;
     width: 80%;
     background-color: rgb(192, 181, 181);
     border-radius: 50%;
     display: inline-block;
-}
-.nästavecka{
-    grid-column: 7;
-    grid-row: 6;
-    width: 100%;
-}
-.föravecka {
-    grid-column: 1;
-    grid-row: 6;
-    width: 100%;
-    transform: rotate(180deg);
-}
+} 
 
-@media only screen and (min-width: 500px) {
+
+/* @media only screen and (min-width: 900px) {
     h2 {
         font-size: 4em;
     }
@@ -87,4 +104,4 @@ h2 {
         border-width: 3px;
         display: inline-block;
       }
-}
+} */
