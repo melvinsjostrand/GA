@@ -11,6 +11,8 @@
 }
 
 body{
+    grid-row: auto auto;
+    display:grid;
     background-color: var(--web--color);
 }
     
