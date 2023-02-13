@@ -5,8 +5,7 @@ let days = ["Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag","Söndag"]
 
 let json=[
             {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
-
+            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"}
         ]
 
 let jDay = [];
