@@ -80,6 +80,7 @@ div{
     min-width: 150px;
     height: 400px;
     border:none;
+    position: relative;
 }
 div a {
     height: 50px;

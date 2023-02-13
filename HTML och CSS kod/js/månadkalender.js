@@ -10,7 +10,6 @@ days.appendChild(section);
 paragraph.className= "paragraph";
 
 let cauntdays = 31;
-let month = 3;
 let counter;
 let month = ("January", "February", "March","April","May","June","July","August","September","October","November","December");
 
