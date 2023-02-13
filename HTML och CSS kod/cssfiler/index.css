@@ -100,7 +100,9 @@ section{
     }
     .sidomeny{
         display: block;
+        grid-row: 1;
     }
+    
     h2{
         text-align: center;
         font-size: 2.7em;
@@ -113,7 +115,9 @@ section{
     border-radius: 50px;
     width: 80%;
     margin:0 auto;
-    
+    }
+    .huvudspalt {
+        grid-row: 1;
     }
     .sidomeny ul{
         height: 100%;
@@ -124,7 +128,6 @@ section{
     .sidomeny li{
         height:10%;
         padding-left: 10px;
-        
     } 
     
     

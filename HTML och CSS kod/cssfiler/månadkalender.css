@@ -16,10 +16,13 @@ main div {
 }
 
 section {
+    border: solid;
     margin: 5px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 10px;
 }
 p{
-    border: solid;
     border-color: var(--color--circle);
     border-radius: 50%;
     font-size: 2em;
@@ -29,8 +32,8 @@ p{
 
 h2 {
     font-size: 3em;
-    padding: 0;
     text-align: center;
+    padding: 0;
 }
 
 .pil {
@@ -45,6 +48,33 @@ h2 {
     width: 30%;
     justify-self: end;
 }
+
+@media only screen and (min-width: 1080px) {
+    #month {
+        display: grid;
+        grid-template-areas: 
+        "h2", 
+        "Main";
+    }
+    section {
+        
+        border-radius: 0%;
+    }
+    p {
+        display: none;
+        border-color: var(--color--circle);
+    }
+    .nästavecka{
+        display: none;
+    }
+    .föravecka {
+        display: none;
+    }
+
+
+
+}
+
 
 
 

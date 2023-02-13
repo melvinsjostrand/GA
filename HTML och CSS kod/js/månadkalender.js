@@ -1,13 +1,12 @@
-let days = document.getElementById("month");
+let Month = document.getElementById("Month");
 let section = document.createElement("section");
 let paragraph = document.createElement("p");
-let text = paragraph.createTextmode("day");
+let text = paragraph.createTextNode("day");
 paragraph.appendChild(text);
 section.appendChild(paragraph);
-days.appendChild(paragraph);
-days.appendChild(section);
+Month .appendChild(section);
 
-paragraph.className= "paragraph";
+// paragraph.className= "paragraph";
 
 let cauntdays = 31;
 let counter;
@@ -19,29 +18,26 @@ function init(){
     createheader(month[month-1]);
 }
 
+    console.log();
+
+
     console.log(createheader[0]);
 
 windows.onload = init;
 
 function createSection(cont, mon) {
     let day = cont + "1" + mon;
-    let section;
-    let paragraph;
-    let text;
+    let section = cont + "1" + mon;
+    let paragraph = cont + "1" + mon;
+    let text = cont + "1" + mon;
 }
 
 section.addEventListener("click"); {
     location.href="...";
-}
+}   
 
 function createheader(Text){
     let headers = getElementByTasName("h2");
     headers[0].innerHTML = text;
 }
 
-// let section = document.createElement(“section”);
-// let paragraph = document.createElement(“p”)
-// let text = paragraph.createTextmode(“day”)
-// paragraph.apppendChild(Text)
-// section.appendchild(paragraph)M
-// days,appendchild(section);
