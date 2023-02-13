@@ -20,7 +20,9 @@ body{
 .sidomeny{
     display: none;
 }
-
+h1{
+    display: none;
+}
 main {
     display: grid;
     grid-auto-rows: minmax(250px, auto);
