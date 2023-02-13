@@ -1,11 +1,12 @@
 let week = 5;
-let day = 10;
+let day = Number(10);
 let month = 3;
 let days = ["Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag","Söndag"]
 
 let json=[
             {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"}  
+            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
+
         ]
 
 let jDay = [];
@@ -16,16 +17,23 @@ function init(){
     }
     
 
-    console.log(jDay[0]);
+    //console.log(jDay[0]);
 
     createH3(week);
     createH5(day,month);
 
     for(let i=0;i<7;i++){
-        if(day+i==jDay[i]){
-            console.log(day+i);
-            createP(days[i]);
-        }
+   
+        json.forEach(element =>{
+            
+            let d = element.date.substring(4);
+            //console.log(d);
+        
+            if(day+i==d){
+                console.log("if: " + d);
+                createP(element,days[i]);
+            }
+        })
     }
 
 }
@@ -44,13 +52,14 @@ function createH5(d,m){
     }
 }
 
-function createP(d){
+function createP(e,d){
     console.log(d);
     let c = document.getElementById(d).getElementsByTagName("div");
     console.log(c);
     let paragraph = document.createElement("p");
-    paragraph.innerHTML = json.org;
-    paragraph.innerHTML += json.starttid;
+    paragraph.innerHTML = e.starttid;
+    paragraph.innerHTML += " "; 
+    paragraph.innerHTML += e.org;
 
     c[0].appendChild(paragraph);
 }
