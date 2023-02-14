@@ -41,7 +41,7 @@ section h4:first-child{
     font-size: 1.5em;
 }
 /* alla färger till veckosidan */
-section#måndag{
+section#mandag{
     background-color: rgb(146,209,79);
     min-width: 150px;
 }
@@ -61,11 +61,11 @@ section#fredag{
     background-color:rgb(254,254,108);
     min-width: 150px;
 }
-section#lördag{
+section#lordag{
     background-color:rgb(249,167,215);
     min-width: 150px;
 }
-section#söndag{
+section#sondag{
     background-color:rgb(214,81,86);
     min-width: 150px;
     margin-bottom: 20px;
@@ -130,7 +130,7 @@ img{
         background-color:var(--web--color);
         border:none;
    }
-    section#måndag{
+    section#mandag{
         background-color:var(--web--color);
         min-width: 150px;
    }
@@ -150,11 +150,11 @@ img{
         background-color:var(--web--color);
         min-width: 150px;
    }
-    section#lördag{
+    section#lordag{
         background-color:var(--web--color);
         min-width: 150px;
    }
-    section#söndag{
+    section#sondag{
         background-color:var(--web--color);
         min-width: 150px;
         margin-bottom: 20px;
@@ -168,7 +168,7 @@ img{
         position:relative;
    }
 
-    #måndag div{
+    #mandag div{
         background-color: rgb(146,209,79);
    }
     #tisdag div{
@@ -183,10 +183,10 @@ img{
     #fredag div{
         background-color:rgb(254,254,108);
    }
-    #lördag div{
+    #lordag div{
         background-color:rgb(249,167,215);
    }
-    #söndag div{
+    #sondag div{
         background-color:rgb(214,81,86);
    }
     img{
