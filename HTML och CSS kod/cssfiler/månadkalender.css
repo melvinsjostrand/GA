@@ -40,35 +40,62 @@ h2 {
     display: flex;
     justify-content: space-between
 }
-.nästavecka{
+.img1{
     width: 30%;
     transform: rotate(180deg);
 }
-.föravecka {
+.img2 {
     width: 30%;
     justify-self: end;
 }
+.pcimg1 {
+    display: none;
+}
+.pcimg2 {
+    grid-row: 2;
+    width: 15%;
+    display: none;
+}
 
 @media only screen and (min-width: 1080px) {
-    #month {
+    #kalender {
         display: grid;
-        grid-template-areas: 
-        "h2", 
-        "Main";
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    #datum {
+        grid-row: 2;
+        grid-column: 2;
     }
     section {
-        
+        width: 100px;
+        height: 150px;
         border-radius: 0%;
     }
     p {
-        display: none;
+        display: block;
         border-color: var(--color--circle);
     }
-    .nästavecka{
+    .img1{
         display: none;
     }
-    .föravecka {
+    .img2 {
         display: none;
+    }
+    .pcimg1 {
+        grid-row: 2;
+        width: 15%;
+        transform: rotate(90deg);
+        float: right;
+        display: block;
+    }
+    .pcimg2 {
+        grid-row: 2;
+        width: 15%;
+        transform: rotate(-90deg);
+        display: block;
     }
 
 
