@@ -107,7 +107,10 @@ img{
 .image2{
     float: right;
 }
-@media only screen and (min-width: 1000px){
+p{
+font-size: 2em;
+}
+@media only screen and (min-width: 1288px){
     header{
         width: 100%;
     }
@@ -137,31 +140,31 @@ img{
    }
     section#mandag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
    }
     section#tisdag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
    }
     section#onsdag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
    }
     section#torsdag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
    }
     section#fredag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
    }
     section#lordag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
    }
     section#sondag{
         background-color:var(--web--color);
-        min-width: 150px;
+        min-width: 1px;
         margin-bottom: 20px;
    }
     div{
@@ -171,6 +174,9 @@ img{
         border-style: solid;
         border-width: 3px;
         position:relative;
+   }
+   p{
+    font-size: 1.2em;
    }
 
     #mandag div{
