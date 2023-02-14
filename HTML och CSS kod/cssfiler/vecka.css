@@ -9,7 +9,7 @@
     --web--color:rgb(237, 237, 237);
 }
 body{
-    grid-row: auto auto;
+    grid-template-rows: auto auto;
     display:grid;
     background-color: var(--web--color);
     width: 97vw;
@@ -123,7 +123,7 @@ img{
         grid-template-columns: 1fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 1fr;
         grid-template-rows: auto auto auto;
         display:grid;
-        width: 97vw;
+        /*width: 97vw;*/
    }
     main h2 , h3{
         grid-column:1/10 ;
