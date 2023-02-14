@@ -1,4 +1,4 @@
-#Mainheader{
+#mainheader{
     display: grid;
     grid-template-rows: auto;
     justify-content: center;
@@ -16,13 +16,13 @@ a{
 a:active {
     text-decoration: none;
 }
-#Aktiviteter{
+#aktiviteter{
     grid-row: 1;
 }
-#Vecka{
+#vecka{
     grid-row: 2;
 }
-#Månad{
+#manad{
     grid-row: 3;
     padding-bottom: 1em;
 }
@@ -35,18 +35,18 @@ nav ul{
     a {
         font-size: 3.9em;
     }
-    #Mainheader {
+    #mainheader {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
     }
-    #Aktiviteter{
+    #aktiviteter{
         grid-row: 1;
         padding-bottom: 1em;
     }
-    #Vecka{
+    #vecka{
         grid-row: 1;
     }
-    #Månad{
+    #manad{
         grid-row: 1;
         padding-bottom: 1em;
     }
