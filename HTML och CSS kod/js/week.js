@@ -1,11 +1,39 @@
 let week = 5;
 let day = Number(10);
 let month = 3;
-let days = ["Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag","Söndag"]
+let days = ["mandag","tisdag","onsdag","torsdag","fredag","lordag","sondag"]
 
 let json=[
             {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"}
+            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
+            {starttid:"12.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
+            {starttid:"15.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
+            {starttid:"21.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},            
+            {starttid:"09.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230315",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230316",org:"Omsfritid"},            
+            {starttid:"09.00",sluttid:"15:00",date:"230315",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230315",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230316",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230316",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
+            {starttid:"09.00",sluttid:"15:00",date:"230316",org:"Omsfritid"}
+
+
         ]
 
 let jDay = [];
