@@ -101,10 +101,10 @@ img{
     height: 7em;
     margin-top: 0px;
 }
-.image1{
+.bilder1{
     transform: rotate(180deg);
 }
-.image2{
+.bilder2{
     float: right;
 }
 p{
@@ -205,7 +205,7 @@ font-size: 2em;
     img{
         margin-top: 200px;
    }
-    .image1{
+    .bilder1{
         grid-row:3/4;
    }
 }
