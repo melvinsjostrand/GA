@@ -40,31 +40,31 @@ section h4:first-child{
     font-size: 1.5em;
 }
 /* alla färger till veckosidan */
-section#mandag{
+section#monday{
     background-color: rgb(146,209,79);
     min-width: 150px;
 }
-section#tisdag{
+section#tuesday{
     background-color:rgb(146,205,219);
     min-width: 150px;
 }
-section#onsdag{
+section#wednesday{
     background-color:rgb(254,254,254);
     min-width: 150px;
 }
-section#torsdag{
+section#thursday{
     background-color:rgb(200,143,88);
     min-width: 150px;
 }
-section#fredag{
+section#friday{
     background-color:rgb(254,254,108);
     min-width: 150px;
 }
-section#lordag{
+section#saturday{
     background-color:rgb(249,167,215);
     min-width: 150px;
 }
-section#sondag{
+section#sunday{
     background-color:rgb(214,81,86);
     min-width: 150px;
     margin-bottom: 20px;
@@ -100,10 +100,10 @@ img{
     height: 7em;
     margin-top: 0px;
 }
-.bilder1{
+.img1{
     transform: rotate(180deg);
 }
-.bilder2{
+.img2{
     float: right;
 }
 p{
@@ -137,31 +137,31 @@ font-size: 2em;
         background-color:var(--web--color);
         border:none;
    }
-    section#mandag{
+    section#monday{
         background-color:var(--web--color);
         min-width: 1px;
    }
-    section#tisdag{
+    section#tuesday{
         background-color:var(--web--color);
         min-width: 1px;
    }
-    section#onsdag{
+    section#wednesday{
         background-color:var(--web--color);
         min-width: 1px;
    }
-    section#torsdag{
+    section#thursday{
         background-color:var(--web--color);
         min-width: 1px;
    }
-    section#fredag{
+    section#friday{
         background-color:var(--web--color);
         min-width: 1px;
    }
-    section#lordag{
+    section#saturday{
         background-color:var(--web--color);
         min-width: 1px;
    }
-    section#sondag{
+    section#sunday{
         background-color:var(--web--color);
         min-width: 1px;
         margin-bottom: 20px;
@@ -180,31 +180,31 @@ font-size: 2em;
     padding-left: 5px;
    }
 
-    #mandag div{
+    #monday div{
         background-color: rgb(146,209,79);
    }
-    #tisdag div{
+    #tuesday div{
         background-color:rgb(146,205,219);
    }
-    #onsdag div{
+    #wednesday div{
         background-color:rgb(254,254,254);
    }
-    #torsdag div{
+    #thursday div{
         background-color:rgb(200,143,88);
    }
-    #fredag div{
+    #friday div{
         background-color:rgb(254,254,108);
    }
-    #lordag div{
+    #saturday div{
         background-color:rgb(249,167,215);
    }
-    #sondag div{
+    #sunday div{
         background-color:rgb(214,81,86);
    }
     img{
         margin-top: 200px;
    }
-    .bilder1{
+    .img1{
         grid-row:3/4;
    }
 }

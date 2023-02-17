@@ -19,10 +19,10 @@ a:active {
 #aktiviteter{
     grid-row: 1;
 }
-#vecka{
+#week{
     grid-row: 2;
 }
-#manad{
+#month{
     grid-row: 3;
     padding-bottom: 1em;
 }
@@ -39,14 +39,14 @@ nav ul{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
     }
-    #aktiviteter{
+    #activities{
         grid-row: 1;
         padding-bottom: 1em;
     }
-    #vecka{
+    #week{
         grid-row: 1;
     }
-    #manad{
+    #month{
         grid-row: 1;
         padding-bottom: 1em;
     }

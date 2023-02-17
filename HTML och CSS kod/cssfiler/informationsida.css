@@ -2,10 +2,11 @@
 body{
     grid-template-rows: auto auto;
     width: 97vw;
+    display: grid;
 }
 
-header{
-    display: none;
+header h1{
+display: none;
 }
 
 

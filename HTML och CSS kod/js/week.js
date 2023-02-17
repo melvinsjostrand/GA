@@ -62,8 +62,9 @@ function init(){
             }
         })
     }
-
 }
+
+
 window.onload=init;
 
 function createH3(w){
@@ -90,3 +91,7 @@ function createP(e,d){
 
     c[0].appendChild(paragraph);
 }
+
+let lA;
+let rA;
+
