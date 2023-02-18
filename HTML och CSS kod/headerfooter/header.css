@@ -16,7 +16,7 @@ a{
 a:active {
     text-decoration: none;
 }
-#aktiviteter{
+#activities{
     grid-row: 1;
 }
 #week{
