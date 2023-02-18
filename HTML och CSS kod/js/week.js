@@ -1,7 +1,11 @@
-let week = 5;
+let week = 1;
 let day = Number(10);
 let month = 3;
 let days = ["mandag","tisdag","onsdag","torsdag","fredag","lordag","sondag"]
+let lA;
+let rA;
+
+
 
 let json=[
             {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
@@ -39,6 +43,27 @@ let json=[
 let jDay = [];
 
 function init(){
+    lA = document.getElementById("leftArrow");
+    rA = document.getElementById("rightArrow");
+    
+    lA.addEventListener("click",event => {
+        if(week-1<1){
+        location.href = "week.html?week=52"; 
+        } else
+        location.href = "week.html?week=(week-1)"; 
+        })
+    
+    
+    
+    rA.addEventListener("click" , event => {
+        if(week+1>52){
+        location.href = "week.html?week=1"; 
+        } else{
+        location.href = "week.html?week=(week+1)"; 
+        }
+    })
+
+
     for(let i=0;i<json.length;i++){
         jDay[i] = json[i].date.substring(4);
     }
@@ -62,6 +87,7 @@ function init(){
             }
         })
     }
+
 }
 
 
@@ -92,6 +118,4 @@ function createP(e,d){
     c[0].appendChild(paragraph);
 }
 
-let lA;
-let rA;
 
