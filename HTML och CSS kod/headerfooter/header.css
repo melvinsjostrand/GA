@@ -9,6 +9,9 @@ header ul{
     padding: 0;
 
 }
+h1{
+    display: none;
+}
 header a{
     font-size: 4.2em;
     color: black;
