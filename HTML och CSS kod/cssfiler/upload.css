@@ -1,8 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 
-main > a{
+main{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 2.5rem;
+}
+
+
+
+#back_button{
+    grid-row: 2;
     background-color: rgb(211, 210, 210);
     color: black;
     border-style: solid;
-    border-width: 2px;
-    margin-left: 40px;
+    border-width: 2px;;
+    font-size: 3rem;
+    grid-gap: 200px;
+    margin-top: 1rem;
+}
+
+/*Nav*/
+
+#mainheader{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    display: none;
+}
+header a{
+    font-size: 4.2em;
+    color: black;
+}
+header a:active {
+    text-decoration: none;
+}
+#activities{
+    grid-row: 1;
+}
+#week{
+    grid-row: 2;
+}
+#month{
+    grid-row: 3;
+}
+#account{
+    grid-row: 4;
+}
+#back_button{
+    grid-row: 5;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+@media only screen and (min-width: 820px) {
+    a {
+        font-size: 3.9em;
+    }
+    #mainheader {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr;
+    }
+    #activities{
+        grid-row: 1;
+        padding-bottom: 1em;
+    }
+    #week{
+        grid-row: 1;
+    }
+    #month{
+        grid-row: 1;
+        padding-bottom: 1em;
+    }
+    #account{
+        grid-row: 1;
+    }
+    #back_button{
+        grid-row: 2;
+        background-color: rgb(211, 210, 210);
+        color: black;
+        border-style: solid;
+        border-width: 2px;;
+        font-size: 2rem; 
+        margin-top: 1rem;
+        margin-right: 15rem;
+    }
+
 }
