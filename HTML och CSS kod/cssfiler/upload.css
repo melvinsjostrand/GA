@@ -3,14 +3,6 @@ body{
     padding: 0;
 }
 
-main{
-    width: 100vw;
-    height: 100vh;
-    margin-top: 2.5rem;
-}
-
-
-
 #back_button{
     grid-row: 2;
     background-color: rgb(211, 210, 210);
@@ -18,7 +10,6 @@ main{
     border-style: solid;
     border-width: 2px;;
     font-size: 3rem;
-    grid-gap: 200px;
     margin-top: 1rem;
 }
 
@@ -95,7 +86,79 @@ header nav ul{
         border-width: 2px;;
         font-size: 2rem; 
         margin-top: 1rem;
-        margin-right: 15rem;
+        margin-right: 5rem;
+        margin-left: 4rem;
+    }
+    #location {
+        grid-column:1/1;
+        width: 50%;
+        height: 50%;
+        margin-left: 10rem;
+    }
+    
+    #start_time {
+        grid-column: 1/1;
+        grid-row: 2;
+        width: 50%;
+        height: 50%;
+        margin-left: 10rem;
+    }
+    
+    #end_time{
+        grid-column: 1/1;
+        grid-row: 3;
+        width: 50%;
+        height: 50%;
+        margin-left: 10rem;
+    }
+    #upload_information{
+        grid-column: 2;
+        grid-row: 1/4;
     }
 
+
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 2.5rem;
+}
+
+#location {
+    grid-column:1/1;
+    width: 50%;
+    height: 50%;
+}
+
+#start_time {
+    grid-column: 1/1;
+    grid-row: 2;
+    width: 50%;
+    height: 50%;
+}
+
+#end_time{
+    grid-column: 1/1;
+    grid-row: 3;
+    width: 50%;
+    height: 50%;
+}
+
+#upload_information{
+    grid-column: 2;
+    grid-row: 1/4;
+    vertical-align: top;
+}
+
+#upload_button{
+    grid-column: 3;
+    grid-row: 3;
+    margin-top: 6.75rem;
+    width: 50%;
+    height: 35%;
+    margin-left: 2rem;
 }
