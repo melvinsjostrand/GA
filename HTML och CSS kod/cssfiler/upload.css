@@ -122,41 +122,47 @@ header nav ul{
 main{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr ;
     width: 100vw;
     height: 60vh;
-    margin-top: 2.5rem;
+}
+
+#back_button {
+    grid-row: 1;
+    width: 35%;
+    height: 50%;
 }
 
 #location {
     grid-column:1/1;
+    grid-row: 2;
     width: 50%;
     height: 50%;
 }
 
 #start_time {
     grid-column: 1/1;
-    grid-row: 2;
+    grid-row: 3;
     width: 50%;
     height: 50%;
 }
 
 #end_time{
     grid-column: 1/1;
-    grid-row: 3;
+    grid-row: 4;
     width: 50%;
     height: 50%;
 }
 
 #upload_information{
     grid-column: 2;
-    grid-row: 1/4;
+    grid-row: 2/5;
     vertical-align: top;
 }
 
 #upload_button{
     grid-column: 3;
-    grid-row: 3;
+    grid-row: 4;
     margin-top: 6.75rem;
     width: 50%;
     height: 35%;
