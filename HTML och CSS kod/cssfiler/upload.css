@@ -138,6 +138,9 @@ main{
     grid-row: 2;
     width: 50%;
     height: 50%;
+    background-color: rgb(201, 201, 201);
+    font-size: 2em;
+    color: black;
 }
 
 #start_time {
@@ -145,6 +148,9 @@ main{
     grid-row: 3;
     width: 50%;
     height: 50%;
+    background-color: rgb(201, 201, 201);
+    font-size: 2em;
+    color: black;
 }
 
 #end_time{
@@ -152,6 +158,9 @@ main{
     grid-row: 4;
     width: 50%;
     height: 50%;
+    background-color: rgb(201, 201, 201);
+    font-size: 2em;
+    color: black;
 }
 
 #upload_information{
