@@ -167,6 +167,9 @@ main{
     grid-column: 2;
     grid-row: 2/5;
     vertical-align: top;
+    background-color: rgb(201, 201, 201);
+    font-size: 2em;
+    color: black;
 }
 
 #upload_button{
@@ -176,4 +179,7 @@ main{
     width: 50%;
     height: 35%;
     margin-left: 2rem;
+    background-color: rgb(201, 201, 201);
+    font-size: 2em;
+    color: black;
 }
