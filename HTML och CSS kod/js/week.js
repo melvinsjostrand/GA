@@ -43,14 +43,25 @@ let json=[
 let jDay = [];
 
 function init(){
+    let week = window.location.search;
+    const urlParams = new URLSearchParams(week);
+    week = Number(urlParams.get("week"));
+    console.log(week);
+
+    if(week==0){
+        week=9;
+    }
+
     lA = document.getElementById("leftArrow");
     rA = document.getElementById("rightArrow");
     
     lA.addEventListener("click",event => {
         if(week-1<1){
         location.href = "week.html?week=52"; 
-        } else
-        location.href = "week.html?week=(week-1)"; 
+        } else{
+            week--;
+            location.href = "week.html?week=" + week; 
+        }        
         })
     
     
@@ -59,7 +70,7 @@ function init(){
         if(week+1>52){
         location.href = "week.html?week=1"; 
         } else{
-        location.href = "week.html?week=(week+1)"; 
+        location.href = "week.html?week=" + (week+1); 
         }
     })
 
@@ -67,6 +78,8 @@ function init(){
     for(let i=0;i<json.length;i++){
         jDay[i] = json[i].date.substring(4);
     }
+
+
     
 
     //console.log(jDay[0]);
