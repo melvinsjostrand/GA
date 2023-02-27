@@ -9,7 +9,7 @@ body{
     color: black;
     border-style: solid;
     border-width: 2px;;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1rem;
 }
 
@@ -57,13 +57,15 @@ header nav ul{
     list-style-type: none;
 }
 
+
+
 @media only screen and (min-width: 820px) {
     a {
         font-size: 3.9em;
     }
     #mainheader {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr;
+        grid-template-rows: 1fr;
     }
     #activities{
         grid-row: 1;
@@ -86,17 +88,18 @@ header nav ul{
         color: black;
         border-style: solid;
         border-width: 2px;;
-        font-size: 2rem; 
-        margin-left: 5rem;
+        font-size: 2.2em; 
+        place-self: center;
         margin-bottom: 1rem;
     }
     #location {
         grid-column:1/1;
         width: 50%;
         height: 50%;
-        margin-left: 10rem;
         margin-bottom: 1rem;
         text-align: center;
+        place-self: center;
+
     }
     
     #start_time {
@@ -104,7 +107,7 @@ header nav ul{
         grid-row: 2;
         width: 50%;
         height: 50%;
-        margin-left: 10rem;
+        place-self: center;
         margin-bottom: 1rem;
     }
     
@@ -113,7 +116,7 @@ header nav ul{
         grid-row: 3;
         width: 50%;
         height: 50%;
-        margin-left: 10rem;
+        place-self: center;
     }
     #upload_information{
         grid-column: 2;
@@ -135,15 +138,17 @@ main{
 #back_button {
     grid-row: 1;
     width: 40%;
-    height: 50%;
     text-align: center;
+    font-size: 2rem;
+    place-self: center;
+    overflow: hidden;
 }
 
 #location {
-    display: block;
+    place-self: center;
     grid-column:1/1;
     grid-row: 2;
-    width: 60%;
+    width: 50%;
     height: 50%;
     background-color: rgb(201, 201, 201);
     font-size: 2em;
@@ -151,22 +156,24 @@ main{
 }
 
 #start_time {
+    place-self: center;
     grid-column: 1/1;
     grid-row: 3;
-    width: 60%;
+    width: 50%;
     height: 50%;
     background-color: rgb(201, 201, 201);
-    font-size: 2em;
+    font-size: 1.75em;
     color: black;
 }
 
 #end_time{
+    place-self: center;
     grid-column: 1/1;
     grid-row: 4;
-    width: 60%;
+    width: 50%;
     height: 50%;
     background-color: rgb(201, 201, 201);
-    font-size: 2em;
+    font-size: 1.75em;
     color: black;
 }
 
@@ -177,6 +184,8 @@ main{
     background-color: rgb(201, 201, 201);
     font-size: 2em;
     color: black;
+    padding: 1rem;
+    resize: none;
 }
 
 #upload_button{
