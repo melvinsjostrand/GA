@@ -9,7 +9,6 @@ body{
     color: black;
     border-style: solid;
     border-width: 2px;;
-    font-size: 2rem;
     margin-top: 1rem;
 }
 
@@ -58,6 +57,7 @@ header nav ul{
 }
 
 
+/*Media Screen min*/
 
 @media only screen and (min-width: 820px) {
     a {
@@ -88,9 +88,10 @@ header nav ul{
         color: black;
         border-style: solid;
         border-width: 2px;;
-        font-size: 2.2em; 
         place-self: center;
         margin-bottom: 1rem;
+        font-size: 2rem;
+        width: 50%;
     }
     #location {
         grid-column:1/1;
@@ -127,6 +128,40 @@ header nav ul{
 
 }
 
+/*Media Screen Max*/
+@media all and (max-width:820px ) {
+    #back_button{
+        font-size: 2rem;
+        height: 80%;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+    #location{
+        width: 80%;
+        height: 80%;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+    #start_time {
+        width: 80%;
+        height: 80%;
+        margin-bottom: 2rem;
+        margin-right: 2rem;      
+        margin-left: 1rem;  
+    }
+    #end_time {
+        width: 80%;
+        height: 80%;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+
+}
+
 main{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -137,9 +172,7 @@ main{
 
 #back_button {
     grid-row: 1;
-    width: 40%;
     text-align: center;
-    font-size: 2rem;
     place-self: center;
     overflow: hidden;
 }
@@ -148,8 +181,6 @@ main{
     place-self: center;
     grid-column:1/1;
     grid-row: 2;
-    width: 50%;
-    height: 50%;
     background-color: rgb(201, 201, 201);
     font-size: 2em;
     color: black;
@@ -159,8 +190,6 @@ main{
     place-self: center;
     grid-column: 1/1;
     grid-row: 3;
-    width: 50%;
-    height: 50%;
     background-color: rgb(201, 201, 201);
     font-size: 1.75em;
     color: black;
@@ -170,8 +199,6 @@ main{
     place-self: center;
     grid-column: 1/1;
     grid-row: 4;
-    width: 50%;
-    height: 50%;
     background-color: rgb(201, 201, 201);
     font-size: 1.75em;
     color: black;
