@@ -38,3 +38,8 @@ grid-row: 1/2;
     grid-column: 4/5;
     grid-row: 3/4;
 }
+
+.file::file-selector-button {
+    width: 400px;
+    height: 400px;
+}
