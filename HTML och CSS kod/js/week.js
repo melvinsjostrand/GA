@@ -1,48 +1,164 @@
-let week = 1;
-let day = Number(10);
-let month = 3;
-let days = ["mandag","tisdag","onsdag","torsdag","fredag","lordag","sondag"]
 let lA;
 let rA;
 
 
 
 let json=[
-            {starttid:"09.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"09.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
-            {starttid:"10.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
-            {starttid:"12.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
-            {starttid:"15.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
-            {starttid:"21.00",sluttid:"15:00",date:"230314",org:"Omsfritid"},
-            {starttid:"11.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},            
-            {starttid:"12.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
-            {starttid:"11.00",sluttid:"15:00",date:"230315",org:"Omsfritid"},
-            {starttid:"09.00",sluttid:"15:00",date:"230316",org:"Omsfritid"},            
-            {starttid:"17.00",sluttid:"15:00",date:"230315",org:"Omsfritid"},
-            {starttid:"22.00",sluttid:"15:00",date:"230315",org:"Omsfritid"},
-            {starttid:"14.00",sluttid:"15:00",date:"230316",org:"Omsfritid"},
-            {starttid:"16.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},
-            {starttid:"16.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
-            {starttid:"19.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},
-            {starttid:"21.00",sluttid:"15:00",date:"230311",org:"Omsfritid"},
-            {starttid:"20.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
-            {starttid:"23.00",sluttid:"15:00",date:"230310",org:"Omsfritid"},
-            {starttid:"17.00",sluttid:"15:00",date:"230316",org:"Omsfritid"},
-            {starttid:"15.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"10.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
-            {starttid:"19.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"22.00",sluttid:"15:00",date:"230312",org:"Omsfritid"},
-            {starttid:"14.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
-            {starttid:"16.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
-            {starttid:"19.00",sluttid:"15:00",date:"230313",org:"Omsfritid"},
-            {starttid:"19.00",sluttid:"15:00",date:"230316",org:"Omsfritid"}
-
-
+{
+    date:"230312",
+    day:"monday",
+    activities:[
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+            }
+}
+]
+},
+{
+    date:"230312",
+    day:"tuesday",
+    activities:[
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+            }
+}
+]
+},
+{
+    date:"230312",
+    day:"wednesday",
+    activities:[
+    {
+        actId:0
+        ,orgId:0,
+        org:"",
+        act:"",
+        info:"",
+        place:"",
+        start:{
+            date:"",
+            time:""
+            },
+        end:{
+            date:"",
+            time:""
+            }
+}
+]
+},
+{
+    date:"230312",
+    day:"thursday",
+    activities:[
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+            }
+}
+]
+},
+{
+    date:"230312",
+    day:"friday",
+    activities:[
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+            }
+}
+]
+},
+{
+    date:"230312",
+    day:"saturday",
+    activities:[
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+            }
+}
+]
+},
+{
+    date:"230312",
+    day:"sunday",
+    activities:[
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+            }
+}
+]
+}
         ]
 
 let jDay = [];
 
 function init(){
+    let day;
+    let month;
     let week = window.location.search;
     const urlParams = new URLSearchParams(week);
     week = Number(urlParams.get("week"));
@@ -74,20 +190,21 @@ function init(){
         }
     })
 
-
-    for(let i=0;i<json.length;i++){
-        jDay[i] = json[i].date.substring(4);
+    for(let i=0;i<7;i++){
+        //hantera dag
+        
+        day = Number(json[i].date.substring(2,4));
+        month = Number(json[i].date.substring(4));
+        //hitta aktiviteter
+        json[i].activities.forEach(element =>{
+            createP(element,json[i].day); //day är svenska id engelska behöver fixas
+        })
     }
-
-
     
-
-    //console.log(jDay[0]);
-
     createH3(week);
     createH5(day,month);
 
-    for(let i=0;i<7;i++){
+   /* for(let i=0;i<7;i++){
    
         json.forEach(element =>{
             
@@ -99,7 +216,7 @@ function init(){
                 createP(element,days[i]);
             }
         })
-    }
+    }*/
 
 }
 
@@ -111,10 +228,11 @@ function createH3(w){
 }
 
 function createH5(d,m){
+   
     let headers = document.getElementsByTagName("h5");
    
     for(let i=0;i<7;i++){
-        headers[i].innerHTML = (d+i) + "/" + m;
+        headers[i].innerHTML = d + "/" + m;
     }
 }
 
@@ -123,11 +241,9 @@ function createP(e,d){
     let c = document.getElementById(d).getElementsByTagName("div");
     console.log(c);
     let paragraph = document.createElement("p");
-    paragraph.innerHTML = e.starttid;
+    paragraph.innerHTML = e.start.time;
     paragraph.innerHTML += " "; 
     paragraph.innerHTML += e.org;
 
     c[0].appendChild(paragraph);
 }
-
-

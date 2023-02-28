@@ -1,7 +1,25 @@
 let json =[
-        {org:"Omsfritid",dag:"230214",tid:"12:00", info:"Pizza"},
-        {org:"Omsfritid",dag:"230214",tid:"14:00", info:"Bowling"},
-
+    {
+        date:"230312",
+        day:"monday",
+        activities:[
+        {
+            actId:1,orgId:1,
+            org:"omsorg",
+            act:"aowmdapmdwpmopawmdpawm",
+            info:"pmawdmapwmap",
+            place:"teknikum",
+            start:{
+                date:"230310",
+                time:"17:00"
+                },
+            end:{
+                date:"230311",
+                time:"13:00"
+                }
+    }
+    ]
+    }
 ];
 
 let time;
