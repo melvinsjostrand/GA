@@ -1,10 +1,12 @@
 let form;
 
 function init(){
+
     form = document.querySelector("form");
 
     form.addEventListener("submit", event=>{
         getFormData();
+      // location.href = "https://omsapp.te-vxo.se/index.html";
         event.preventDefault();
     })
 }
@@ -18,9 +20,11 @@ function getFormData(){
 
     console.log(description);
     console.log(org);
-    console.log(image)
+    console.log(image);
 
     let json = {
         "org":org,
+        "description":description,
+        "image":image
     }
 }
