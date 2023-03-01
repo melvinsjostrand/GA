@@ -1,4 +1,5 @@
 let form;
+const backurl = "https://omsapp.te-vxo.se/index.html";
 
 function init(){
 
@@ -6,7 +7,7 @@ function init(){
 
     form.addEventListener("submit", event=>{
         getFormData();
-      // location.href = "https://omsapp.te-vxo.se/index.html";
+      // location.href = backurl;
         event.preventDefault();
     })
 }
