@@ -22,12 +22,6 @@ window.onload = init;
 
 function createSection(el){
 
-    let dayElement = document.getElementById("day");
-    let days = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
-    let date = new Date();
-    let day = days[date.getDay()];
-    dayElement.innerHTML = day;
-
     let sections = document.getElementsByClassName("gridsection2");
     console.log(sections[0]);
 
