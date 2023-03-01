@@ -132,7 +132,7 @@ let json=[
 ]
 },
 {
-    date:"230312",
+    date:"230314",
     day:"sunday",
     activities:[
     {
@@ -193,16 +193,18 @@ function init(){
     for(let i=0;i<7;i++){
         //hantera dag
         
-        day = Number(json[i].date.substring(2,4));
-        month = Number(json[i].date.substring(4));
+        month = Number(json[i].date.substring(2,4));
+        day = Number(json[i].date.substring(4));
+        createH5(day,month);
         //hitta aktiviteter
         json[i].activities.forEach(element =>{
+            
             createP(element,json[i].day); //day är svenska id engelska behöver fixas
         })
     }
     
     createH3(week);
-    createH5(day,month);
+    //createH5(day,month);
 
    /* for(let i=0;i<7;i++){
    
@@ -237,6 +239,8 @@ function createH5(d,m){
 }
 
 function createP(e,d){
+   
+   
     console.log(d);
     let c = document.getElementById(d).getElementsByTagName("div");
     console.log(c);
