@@ -7,7 +7,7 @@ function init(){
 
     form.addEventListener("submit", event=>{
         getFormData();
-      // location.href = backurl;
+     //   location.href = backurl;
         event.preventDefault();
     })
 }
