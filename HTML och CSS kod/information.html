@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./cssfiler/informationpage.css">
     <link rel="stylesheet" href="./headerfooter/header.css">
-    <script src="./js/Informationssida.js" defer></script>
+    <script src="./js/information.js" defer></script>
     <title>Information - omsorgsapp</title>
 </head>
 <body>
@@ -31,10 +31,10 @@
         </nav>
     </header>
     <main>
-        <a id="back_button" href="Vecka.html">Gå Tillbaka</a>
+        <a id='back_button' href="javascript:history.back()">Gå tillbaka</a>
 
         <section class="gridsection grid">
-            <h2 class="Dag-Titel">Dag</h2>
+            <h2 id="day"></h2>
             <div class="Dag-Infokalender">
                 <p id="time"></p>
             </div>

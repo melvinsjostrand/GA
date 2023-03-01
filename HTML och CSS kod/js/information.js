@@ -1,25 +1,6 @@
 let json =[
-    {
-        date:"230312",
-        day:"monday",
-        activities:[
-        {
-            actId:1,orgId:1,
-            org:"omsorg",
-            act:"aowmdapmdwpmopawmdpawm",
-            info:"pmawdmapwmap",
-            place:"teknikum",
-            start:{
-                date:"230310",
-                time:"17:00"
-                },
-            end:{
-                date:"230311",
-                time:"13:00"
-                }
-    }
-    ]
-    }
+        {org:"Omsfritid",dag:"230214",tid:"12:00", info:"Pizza"},
+        {org:"Omsfritid",dag:"230214",tid:"14:00", info:"Bowling"},
 ];
 
 let time;
@@ -40,6 +21,13 @@ function init(){
 window.onload = init;
 
 function createSection(el){
+
+    let dayElement = document.getElementById("day");
+    let days = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
+    let date = new Date();
+    let day = days[date.getDay()];
+    dayElement.innerHTML = day;
+
     let sections = document.getElementsByClassName("gridsection2");
     console.log(sections[0]);
 
