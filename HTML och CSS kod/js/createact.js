@@ -15,15 +15,28 @@ window.onload = init;
 
 function getFormData(){
     let location = form.elements.location.value;
-    //230301T12:20"
-    //let description = form.elements.desc.value;
-    //let image = form.elements.filename.files;
+    let starttime = form.elements.start_time.value;
+    let endtime = form.elements.end_time.value;
+    let information = form.elements.upload_information.value;
 
+    //230301T12:20"
     console.log(location);
+    console.log(starttime);
+    console.log(endtime);
+    console.log(information)
 
     let json = {
-        "org":org,
-        "description":description,
-        "image":image
+        "act": "string",
+        "place": location,
+        "info": "string",
+        starttime: {
+            "date": "",
+            "time": ""
+        },
+        endtime: {
+            "date": "",
+            "time": ""
+        }
+    
     }
 }

@@ -162,10 +162,10 @@ header nav ul{
 
 }
 
-main{
+#container{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
     width: 100vw;
     height: 70vh;
 }
@@ -225,4 +225,8 @@ main{
     background-color: rgb(201, 201, 201);
     font-size: 1.5em;
     color: black;
+}
+
+label {
+    display: none;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./cssfiler/upload.css">
+    <script src="./JS/createact.js" defer></script>
     <title>Ladda upp inforamtion - omsorgsapp</title>
 </head>
 <body>
@@ -31,13 +32,18 @@
         </header>
 
         <main>
-            <a id="back_button" href="....html"> Gå tillbaka</a>
-            <form>
+            <form id="container" action="">
+                <a id="back_button" href="....html"> Gå tillbaka</a>
                 <label for="location">Plats</label>
                 <input type="text" id="location" placeholder="Plats" name="location">
-                <input type="datetime-local" id="start_time" placeholder='Starttid' onfocus="(this.type='datetime-local')">
-                <input type="text" id="end_time" placeholder='Sluttid' onfocus="(this.type='datetime-local')">
-                <textarea placeholder="Information Om Aktivitet" name="" id="upload_information"></textarea>
+
+                <label for="start_time">Starttid</label>
+                <input type="datetime-local" id="start_time" name="start_time">
+
+                <label for="end_time">sluttid</label>
+                <input type="datetime-local" id="end_time" name="end_time">
+
+                <textarea placeholder="Information Om Aktivitet" name="upload_information" id="upload_information"></textarea>
                 <button id="upload_button">Ladda upp</button>
             </form>
         </main>
