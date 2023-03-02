@@ -5,7 +5,7 @@ let rA;
 
 let json=[
 {
-    date:"230312",
+    date:"230227",
     day:"monday",
     activities:[
     {
@@ -22,11 +22,11 @@ let json=[
             date:"230311",
             time:"13:00"
             }
-}
+},
 ]
 },
 {
-    date:"230312",
+    date:"230228",
     day:"tuesday",
     activities:[
     {
@@ -47,7 +47,7 @@ let json=[
 ]
 },
 {
-    date:"230312",
+    date:"230301",
     day:"wednesday",
     activities:[
     {
@@ -69,12 +69,12 @@ let json=[
 ]
 },
 {
-    date:"230312",
+    date:"230302",
     day:"thursday",
     activities:[
     {
         actId:1,orgId:1,
-        org:"omsorg",
+        org:"teknikum",
         act:"aowmdapmdwpmopawmdpawm",
         info:"pmawdmapwmap",
         place:"teknikum",
@@ -90,7 +90,7 @@ let json=[
 ]
 },
 {
-    date:"230312",
+    date:"230303",
     day:"friday",
     activities:[
     {
@@ -111,7 +111,7 @@ let json=[
 ]
 },
 {
-    date:"230312",
+    date:"230304",
     day:"saturday",
     activities:[
     {
@@ -132,7 +132,7 @@ let json=[
 ]
 },
 {
-    date:"230314",
+    date:"230305",
     day:"sunday",
     activities:[
     {
@@ -165,7 +165,7 @@ function init(){
     console.log(week);
 
     if(week==0){
-        week=9;
+        week=10;
     }
 
     lA = document.getElementById("leftArrow");
@@ -195,12 +195,13 @@ function init(){
         
         month = Number(json[i].date.substring(2,4));
         day = Number(json[i].date.substring(4));
-        createH5(day,month);
+        createH5(day,month, i);
         //hitta aktiviteter
+ 
         json[i].activities.forEach(element =>{
-            
             createP(element,json[i].day); //day är svenska id engelska behöver fixas
-        })
+            }
+        )
     }
     
     createH3(week);
@@ -229,14 +230,14 @@ function createH3(w){
     headers[0].innerHTML = "v." + w;
 }
 
-function createH5(d,m){
+function createH5(d,m, index){
    
     let headers = document.getElementsByTagName("h5");
    
-    for(let i=0;i<7;i++){
-        headers[i].innerHTML = d + "/" + m;
-    }
+    headers[index].textContent = d + "/" + m;
+
 }
+
 
 function createP(e,d){
    

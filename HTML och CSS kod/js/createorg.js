@@ -19,6 +19,7 @@ function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
     let image = form.elements.filename.files;
+    let url = form.elements.url.value;
 
     console.log(description);
     console.log(org);
@@ -27,7 +28,8 @@ function getFormData(){
     let json = {
         "org":org,
         "description":description,
-        "image":image
+        "image":image,
+        "url":url
     }
 }
 
