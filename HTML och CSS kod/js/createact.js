@@ -28,14 +28,14 @@ function getFormData(){
     let json = {
         "act": "string",
         "place": location,
-        "info": "string",
-        starttime: {
-            "date": "",
-            "time": ""
+        "info": information,
+        "starttime": {
+            "date":starttime ,
+            "time": starttime
         },
-        endtime: {
-            "date": "",
-            "time": ""
+        "endtime": {
+            "date": starttime,
+            "time": starttime
         }
     
     }
