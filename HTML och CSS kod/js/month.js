@@ -1,9 +1,33 @@
-let datum;
-let img;
-let month = 1;   
+let month = 1;
+  
+let json=[
+    {
+        "date": "string (yyMMdd)",
+        "day": "string",
+        "activities": [
+            {
+                "actId": "int",
+                "orgId": "int",
+                "org": "string",
+                "act": "string",
+                "info": "string",
+                "place": "string",
+                "start": {
+                    "date": "string",
+                    "time": "string"
+                },
+                "end": {
+                    "date": "string",
+                    "time": "string"
+                }
+            }
+        ]
+    }
+]
+ 
 const m = [{month:"Januari", days:31},{month:"Februari", days:28},{month:"Mars", days:31}]
 function init(){
-    datum = document.getElementById("datum");
+    datum = document.getElementById("date");
     days = m[month-1].days;
     console.log(days);
     counter = 0; 
