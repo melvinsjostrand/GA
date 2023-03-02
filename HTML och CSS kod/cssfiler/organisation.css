@@ -1,6 +1,55 @@
+:root {
+    --web--color:rgb(237, 237, 237);
+    --color--circle: rgb(0, 0, 0);
+    --go-back--color:rgb(192, 192, 192);
+    --orga-name-color:rgb(255, 115, 0);
+}
 main {
     display: grid;
-    grid-template-areas:
-    "go-back" "."
-    "." "link" "Organisation" "." ;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+}
+
+.go-back {
+    display: flex;
+}
+.go-back > p, #link{
+    background-color: var(--go-back--color);
+    font-size: 2em;
+}
+
+#organisation-name {
+    background-color: var(--orga-name-color);
+}
+
+#organisation-description   {
+    background-color: var(--orga-name-color);
+}
+
+#Organisation-description{
+    background-color: var(--orga-name-color);
+}
+img {
+    display: flex;
+    justify-self: flex-end;
+    width: 50px;
+}
+
+@media only screen and (min-width: 820px) {
+    main {
+        grid-template-rows: 1fr 3fr 1fr 2fr 1fr;
+    }
+    .go-back > p {
+        margin-left: 3rem;
+        font-size: 3em;
+    }
+    #organisation-name {
+        
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+    h2 {
+        font-size: 2em;
+        margin-left: 1rem;
+    }
+
 }
