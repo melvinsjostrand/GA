@@ -1,5 +1,6 @@
 let form;
 //const backurl = "https://omsapp.te-vxo.se/index.html";
+const serverurl = "";
 
 function init(){
 
@@ -24,19 +25,34 @@ function getFormData(){
     console.log(starttime);
     console.log(endtime);
     console.log(information)
-
-    let json = {
-        "act": "string",
-        "place": location,
-        "info": information,
-        "starttime": {
-            "date":starttime ,
-            "time": starttime
-        },
-        "endtime": {
-            "date": starttime,
-            "time": starttime
-        }
-    
-    }
 }
+
+let JSON = {
+    "act": "Titel",
+    "place": location,
+    "info": information,
+    "starttime": {
+        "date":starttime ,
+        "time": starttime
+    },
+    "endtime": {
+        "date": endtime,
+        "time": endtime
+    }
+
+}
+
+const response = {
+    header:{
+        method: "POST"
+    },
+    body : JSON
+}
+
+fetch(serverurl,response)
+    .then(Response => {
+        return Response.json();
+    })
+    .then(data => {
+        console.log(data)
+    })
