@@ -37,16 +37,16 @@ h2 {
     padding: 0;
 }
 
-.pil {
+.arrow-mobile {
     display: flex;
     justify-content: space-between
 }
 .img1{
-    width: 30%;
+    width: 20%;
 
 }
 .img2 {
-    width: 30%;
+    width: 20%;
     justify-self: end;
 }
 .pcimg1 {
