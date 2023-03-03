@@ -33,12 +33,16 @@ function getFormData(){
     }
 }
 
-
-function encodeImageFileAsURL(element) {
-    var file = element.files[0];
-    var reader = new FileReader();
-    reader.onloadend = function() {
-      console.log('RESULT', reader.result)
-    }
-    reader.readAsDataURL(file);
-  }
+/*async function postFetch(getFormData , token , json){
+    const reponse = await fetch(getFormData ,{
+        method:"post",
+        mode:"cors",
+        Headers:{
+            "content-type":application,
+            "authorazation":token
+        },
+        body:json.string(json)
+    })
+    return Response.status;
+}
+*/
