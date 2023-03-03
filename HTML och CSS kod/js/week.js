@@ -128,6 +128,51 @@ let json=[
             date:"230311",
             time:"13:00"
             }
+        },
+        {
+            actId:1,orgId:1,
+            org:"omsorg",
+            act:"aowmdapmdwpmopawmdpawm",
+            info:"pmawdmapwmap",
+            place:"teknikum",
+            start:{
+                date:"230310",
+                time:"17:00"
+                },
+            end:{
+                date:"230311",
+                time:"13:00"
+        }
+    },
+    {
+        actId:1,orgId:1,
+        org:"omsorg",
+        act:"aowmdapmdwpmopawmdpawm",
+        info:"pmawdmapwmap",
+        place:"teknikum",
+        start:{
+            date:"230310",
+            time:"17:00"
+            },
+        end:{
+            date:"230311",
+            time:"13:00"
+    }
+},
+{
+    actId:1,orgId:1,
+    org:"omsorg",
+    act:"aowmdapmdwpmopawmdpawm",
+    info:"pmawdmapwmap",
+    place:"teknikum",
+    start:{
+        date:"230310",
+        time:"17:00"
+        },
+    end:{
+        date:"230311",
+        time:"13:00"
+}
 }
 ]
 },
@@ -148,6 +193,21 @@ let json=[
         end:{
             date:"230311",
             time:"13:00"
+            }
+    },
+            {
+                actId:1,orgId:1,
+                org:"omsorg",
+                act:"aowmdapmdwpmopawmdpawm",
+                info:"pmawdmapwmap",
+                place:"teknikum",
+                start:{
+                    date:"230310",
+                    time:"17:00"
+                    },
+                end:{
+                    date:"230311",
+                    time:"13:00"
             }
 }
 ]
@@ -201,6 +261,7 @@ function init(){
         json[i].activities.forEach(element =>{
             createP(element,json[i].day); //day är svenska id engelska behöver fixas
             }
+        
         )
     }
     
