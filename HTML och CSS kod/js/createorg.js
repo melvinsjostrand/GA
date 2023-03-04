@@ -18,8 +18,7 @@ window.onload = init;
 function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
-    let image = form.elements.filename.files;
-    let url = form.elements.url.value;
+    let image = form.elements.fileinput.files;
 
     console.log(description);
     console.log(org);
@@ -38,8 +37,8 @@ function getFormData(){
         body:json.string(json)
     })
     return Response.status;
-}
-*/
+}*/
+
 
 const fileInput = document.getElementById("fileinput");
 
