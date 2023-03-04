@@ -36,12 +36,12 @@
         
         <form id=""action="">
             <label for="nameonorg" class="labelname">Skriv Organisationens namn </label>
-            <input type="text" id="nameonorg" name="createorg" class="inputname">
+            <input type="text" id="nameonorg" name="createorg" class="inputname" required>
             <label for="desc" class="labeldesc">Beskrivning </label>
             <input type="text" id="desc" name="desc" class="inputdesc">
+            <input type="file" id="fileinput" name="hidden" class="file" >
+            <input type="submit" value="Skapa Organisation" class="submit">
 
-            <input type="file" id="myFile" name="filename" class="file">
-            <input type="submit" value="Skapa Organisation" class="submit" onchange="encodeImageFileAsURL(this)">
         </form>
     </main>
 </body>

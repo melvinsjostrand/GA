@@ -25,12 +25,6 @@ function getFormData(){
     console.log(org);
     console.log(image);
 
-    let json = {
-        "org":org,
-        "description":description,
-        "image":image,
-        "url":url
-    }
 }
 
 /*async function postFetch(getFormData , token , json){
@@ -46,3 +40,18 @@ function getFormData(){
     return Response.status;
 }
 */
+
+const fileInput = document.getElementById("fileinput");
+
+fileInput.addEventListener("change", e =>{
+    console.log(e);
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+        console.log(reader.result);
+    });
+
+    reader.readAsDataURL(file);
+});
+
