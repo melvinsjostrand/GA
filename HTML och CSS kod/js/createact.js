@@ -2,6 +2,19 @@ let form;
 //const backurl = "https://omsapp.te-vxo.se/index.html";
 const serverurl = "";
 
+async function postFetch(path, token , json){
+    const response = await fetch(path ,{
+    method: "post",
+    mode:"cors",
+    headers:{
+    "content-type":application,
+    "authorization":token
+    },
+    body:json.stringify(json)
+    });
+    return response.status;
+}
+
 function init(){
 
     form = document.querySelector("form");
@@ -41,18 +54,3 @@ let JSON = {
     }
 
 }
-
-const response = {
-    header:{
-        method: "POST"
-    },
-    body : JSON
-}
-
-fetch(serverurl,response)
-    .then(Response => {
-        return Response.json();
-    })
-    .then(data => {
-        console.log(data)
-    })

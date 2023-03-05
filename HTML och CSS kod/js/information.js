@@ -44,3 +44,9 @@ function createSection(el){
 
     sections[0].appendChild(section);
 }
+
+async function getFetch(path){
+    const response = await fetch(path);
+    const json = await response.json();
+    return json
+}
