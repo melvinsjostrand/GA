@@ -1,8 +1,25 @@
+const formEl = document.querySelector('.form');
+
+formEl.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const formdata = new FormData(formEl);
+    const data = new URLSearchParams(formdata)
+    
+    fetch('api', {
+        method: 'POST',
+        body: data
+    }).then(res => res.json())
+    .then (data => console.log(data))
+    .catch(error => console.log(error))
+
+});
+
 let form;
 //const backurl = "https://omsapp.te-vxo.se/index.html";
 const serverurl = "";
 
-async function postFetch(path, token , json){
+async function postFetch(path, token , JSON){
     const response = await fetch(path ,{
     method: "post",
     mode:"cors",
@@ -10,7 +27,7 @@ async function postFetch(path, token , json){
     "content-type":application,
     "authorization":token
     },
-    body:json.stringify(json)
+    body:JSON.stringify(JSON)
     });
     return response.status;
 }
@@ -32,8 +49,7 @@ function getFormData(){
     let starttime = form.elements.start_time.value;
     let endtime = form.elements.end_time.value;
     let information = form.elements.upload_information.value;
-
-    //230301T12:20"
+    
     console.log(location);
     console.log(starttime);
     console.log(endtime);
