@@ -83,8 +83,8 @@ img {
     section > img {
         grid-column: 3;
         grid-row: 2;
-        justify-self: left;
-        justify-self: end;
+        align-self: self-end;
+        justify-self: start;
         
     }
 
