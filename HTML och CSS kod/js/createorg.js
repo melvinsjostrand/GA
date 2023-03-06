@@ -18,10 +18,11 @@ window.onload = init;
 function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
-    let image = form.elements.fileinput.files;
+  /*  let image = form.elements.fileinput.files;*/
 
     console.log(description);
     console.log(org);
+/*    console.log(image);*/
     console.log(image);
 
 }
@@ -48,7 +49,8 @@ fileInput.addEventListener("change", e =>{
     const reader = new FileReader();
 
     reader.addEventListener("load", () => {
-        console.log(reader.result);
+/*        console.log(reader.result);*/
+        image = reader.result
     });
 
     reader.readAsDataURL(file);
