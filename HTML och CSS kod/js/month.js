@@ -1,5 +1,6 @@
 let month;
 let datum;
+let year;
   
 let json=[
     {
@@ -48,14 +49,51 @@ let json=[
     }
 ]
  
-const m = ["Januari","Februari","Mars"];
+const m = ["Januari","Februari","Mars","April","May","Juni","Juli","Augusti","September","Oktober","November","December"];
 let monthInfo=[];
 
 function init(){
-    let day = new Date();
-    month = day.getMonth() + 1;
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    month = Number(urlParams.get("m"));
+    year = Number(urlParams.get("y"));
+    if(month === 0){
+        let day = new Date();
+        month = day.getMonth() + 1;
+        year = Number(day.getFullYear().toString().substring(2,4));
+        console.log(year);
+    }
+   
     console.log(month);
     getMonth();
+
+    let rA = document.getElementById("rightArrow");
+    rA.addEventListener("click", event=>{
+        month++;
+        if(month>12){
+            month = 1;
+            year++;
+        } 
+         
+        location.href = "month.html?y=" + year+ "&m=" + month;   
+        
+        
+    }) 
+
+    let lA = document.getElementById("leftArrow");
+    lA.addEventListener("click", event=>{
+        month--;
+        if(month<1){
+            month = 12;
+            year--;
+        } 
+
+        console.log(month);
+        console.log(year);
+
+        location.href = "month.html?y=" + year+ "&m=" + month;
+    })  
 }
  window.onload = init;
 
@@ -63,8 +101,9 @@ function init(){
     datum = document.getElementById("date");
 
     console.log(month);
+    console.log(year);
 
-    let path = "https://omsorgapiapi.azure-api.net/Activity/23/" + month;
+    let path = "https://omsorgapiapi.azure-api.net/Activity/"+ year +"/" + month;
 
     monthInfo = await getMonthFetch(path);
 
