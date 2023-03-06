@@ -18,18 +18,16 @@ window.onload = init;
 function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
-  /*  let image = form.elements.fileinput.files;*/
+   let image = form.elements.fileinput.files;
 
     console.log(description);
     console.log(org);
-/*    console.log(image);*/
-    console.log(image1);
-    console.log(image2);
-    
+console.log(image);
+
 }
 
-function Imageupload{
-const src;
+
+
 const fileInput = document.getElementById("fileinput");
 
 fileInput.addEventListener("change", e =>{
@@ -38,14 +36,13 @@ fileInput.addEventListener("change", e =>{
     const reader = new FileReader();
 
     reader.addEventListener("load", () => {
-/*        console.log(reader.result);*/
-        image1 = reader.result;
-        image2 = reader.readAsDataURL(file);
+   console.log(reader.result);
+
     });
 
     reader.readAsDataURL(file);
 });
-}
+
 /*async function postFetch(getFormData , token , json){
     const reponse = await fetch(getFormData ,{
         method:"post",
