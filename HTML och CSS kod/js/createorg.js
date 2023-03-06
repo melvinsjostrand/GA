@@ -23,8 +23,9 @@ function getFormData(){
     console.log(description);
     console.log(org);
 /*    console.log(image);*/
-    console.log(image);
-
+    console.log(image1);
+    console.log(image2);
+    
 }
 
 /*async function postFetch(getFormData , token , json){
@@ -50,7 +51,8 @@ fileInput.addEventListener("change", e =>{
 
     reader.addEventListener("load", () => {
 /*        console.log(reader.result);*/
-        image = reader.result
+        image1 = reader.result;
+        image2 = reader.readAsDataURL(file);
     });
 
     reader.readAsDataURL(file);
