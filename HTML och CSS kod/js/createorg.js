@@ -28,20 +28,8 @@ function getFormData(){
     
 }
 
-/*async function postFetch(getFormData , token , json){
-    const reponse = await fetch(getFormData ,{
-        method:"post",
-        mode:"cors",
-        Headers:{
-            "content-type":application,
-            "authorazation":token
-        },
-        body:json.string(json)
-    })
-    return Response.status;
-}*/
-
-
+function Imageupload{
+const src;
 const fileInput = document.getElementById("fileinput");
 
 fileInput.addEventListener("change", e =>{
@@ -57,4 +45,21 @@ fileInput.addEventListener("change", e =>{
 
     reader.readAsDataURL(file);
 });
-
+}
+/*async function postFetch(getFormData , token , json){
+    const reponse = await fetch(getFormData ,{
+        method:"post",
+        mode:"cors",
+        Headers:{
+            "content-type":application,
+            "authorazation":token
+        },
+        body:json.stringify({
+        Image:"string : base64,
+        org:"orgdata,
+        description:"descriptiondata"
+        })
+    })
+    const json = await return respone.json();
+    
+}*/
