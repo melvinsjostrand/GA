@@ -286,6 +286,10 @@ function init(){
 
 window.onload=init;
 
+
+async function getweek(){
+    
+}
 function createH3(w){
     let headers = document.getElementsByTagName("h3");
     headers[0].innerHTML = "v." + w;
@@ -312,4 +316,10 @@ function createP(e,d){
     paragraph.innerHTML += e.org;
 
     c[0].appendChild(paragraph);
+}
+
+async function getWeekFetch(path){
+    let response = await fetch(path);
+    let json = await response.json();
+    return json;
 }

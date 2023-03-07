@@ -1,4 +1,5 @@
 let form;
+let srcdata;
 const backurl = "https://omsapp.te-vxo.se/index.html";
 
 function init(){
@@ -15,14 +16,26 @@ function init(){
 
 window.onload = init;
 
-function getFormData(){
+async function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
-    let image = form.elements.fileinput.files;
+    //let image = form.elements.fileinput.files;
 
         console.log(description);
         console.log(org);
-        console.log(image);
+        console.log(srcdata);
+        Json={            
+            "org":org,
+            "description":description,
+            "image":""
+        }
+
+        console.log(Json);
+    
+        let status = await postFetch(Json);
+
+        console.log(status);
+
 }
 
 
@@ -36,6 +49,7 @@ fileInput.addEventListener("change", e =>{
 
         reader.addEventListener("load", () => {
         console.log(reader.result);
+        srcdata = reader.result;
 
     });
 
@@ -43,20 +57,19 @@ fileInput.addEventListener("change", e =>{
 });
 
 
-async function postFetch(getFormData , token , json){
-    const reponse = await fetch(getFormData ,{
+async function postFetch(json, /*token*/){
+    let path = "https://omsorgapiapi.azure-api.net/Organization";
+
+    const response = await fetch(path ,{
         method:"post",
         mode:"cors",
         Headers:{
-            "content-type":application,
-            "authorazation":token
+            "content-type":"application/json"
+            /*"authorazation":token*/
         },
-        body:json.stringify({
-        Image:"string : base64",
-        org:"orgdata",
-        description:"descriptiondata"
-        })
+        body:JSON.stringify(json)
     })
-    const json = await return respone.json();
+
+   return response.status;
     
 }
