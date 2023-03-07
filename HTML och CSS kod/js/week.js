@@ -250,20 +250,7 @@ function init(){
         }
     })
 
-    for(let i=0;i<7;i++){
-        //hantera dag
-        
-        month = Number(json[i].date.substring(2,4));
-        day = Number(json[i].date.substring(4));
-        createH5(day,month, i);
-        //hitta aktiviteter
- 
-        json[i].activities.forEach(element =>{
-            createP(element,json[i].day); //day är svenska id engelska behöver fixas
-            }
-        
-        )
-    }
+
     
     createH3(week);
     //createH5(day,month);
@@ -288,7 +275,24 @@ window.onload=init;
 
 
 async function getweek(){
+    jDay = await getMonthFetch(path);
+    let path = "https://omsorgapiapi.azure-api.net/Activity/" + month + "/" + day;
     
+    
+    for(let i=0;i<7;i++){
+        //hantera dag
+        
+        month = Number(json[i].date.substring(2,4));
+        day = Number(json[i].date.substring(4));
+        createH5(day,month, i);
+        //hitta aktiviteter
+ 
+        json[i].activities.forEach(element =>{
+            createP(element,json[i].day);
+            }
+        
+        )
+    }
 }
 function createH3(w){
     let headers = document.getElementsByTagName("h3");
