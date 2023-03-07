@@ -1,9 +1,10 @@
 let lA;
 let rA;
+let year = 23;
+let weekNumber;
 
 
-
-let json=[
+/*let json=[
 {
     date:"230227",
     day:"monday",
@@ -212,8 +213,8 @@ let json=[
 }
 ]
 }
-        ]
-
+      ]
+*/
 let jDay = [];
 
 function init(){
@@ -221,38 +222,45 @@ function init(){
     let month;
     let week = window.location.search;
     const urlParams = new URLSearchParams(week);
-    week = Number(urlParams.get("week"));
+    weekNumber = Number(urlParams.get("week"));
     console.log(week);
 
-    if(week==0){
-        week=10;
+    if(weekNumber==0){
+        let currentDate = new Date();
+
+        let startDate = new Date(currentDate.getFullYear(),0,1);
+
+        let days = Math.floor((currentDate-startDate)/(24*60*60*1000));
+
+        weekNumber = Math.ceil(days/7);
     }
 
+    getweek();
     lA = document.getElementById("leftArrow");
     rA = document.getElementById("rightArrow");
     
     lA.addEventListener("click",event => {
-        if(week-1<1){
+        if(weekNumber-1<1){
         location.href = "week.html?week=52"; 
         } else{
-            week--;
-            location.href = "week.html?week=" + week; 
+            weekNumber--;
+            location.href = "week.html?week=" + weekNumber; 
         }        
         })
     
     
     
     rA.addEventListener("click" , event => {
-        if(week+1>52){
+        if(weekNumber+1>52){
         location.href = "week.html?week=1"; 
         } else{
-        location.href = "week.html?week=" + (week+1); 
+        location.href = "week.html?week=" + (weekNumber+1); 
         }
     })
 
 
     
-    createH3(week);
+    createH3(weekNumber);
     //createH5(day,month);
 
    /* for(let i=0;i<7;i++){
@@ -275,20 +283,21 @@ window.onload=init;
 
 
 async function getweek(){
-    jDay = await getMonthFetch(path);
-    let path = "https://omsorgapiapi.azure-api.net/Activity/" + month + "/" + day;
+    console.log(weekNumber);
+    let path = "https://omsorgapiapi.azure-api.net/Activity/" + year + "/w/" + weekNumber;
     
-    
+    jDay = await getWeekFetch(path);
+    console.log(jDay)
     for(let i=0;i<7;i++){
         //hantera dag
         
-        month = Number(json[i].date.substring(2,4));
-        day = Number(json[i].date.substring(4));
+        month = Number(jDay[i].date.substring(2,4));
+        day = Number(jDay[i].date.substring(4));
         createH5(day,month, i);
         //hitta aktiviteter
  
-        json[i].activities.forEach(element =>{
-            createP(element,json[i].day);
+        jDay[i].activities.forEach(element =>{
+            createP(element,jDay[i].day);
             }
         
         )
