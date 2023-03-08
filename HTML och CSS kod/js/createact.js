@@ -1,4 +1,5 @@
 let form;
+
 const backurl = "https://omsapp.te-vxo.se/index.html";
 
 function init(){
@@ -22,14 +23,22 @@ async function getFormData(){
     let end_time = form.elements.end_time.value;
     //let image = form.elements.fileinput.files;
 
+    start_time = st;
+    end_time = et;
+    let st = new Date(start_time).replace('T', '');
+    let et = new Date(end_time).replace('T', '');
+
         console.log(start_time);
         console.log(end_time);
         console.log(location);
         console.log(upload_information);
+        console.log(st);
+        console.log(et);
         Json={            
             "location":location,
             "start_time":start_time,
-
+            "end_time":end_time,
+            "upload_information":upload_information
         }
 
         console.log(Json);
@@ -39,6 +48,8 @@ async function getFormData(){
         console.log(status);
 
 }
+
+
 
 
 async function postFetch(json, /*token*/){
