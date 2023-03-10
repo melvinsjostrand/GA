@@ -100,8 +100,10 @@ p {
         font-size: 2em;
         overflow: auto;
         text-align:center;
+        padding-left: 0;
     }
     .sidomeny li{
         height:8vh;
+        list-style-type: none;
     } 
 }
