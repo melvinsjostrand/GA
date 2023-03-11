@@ -1,110 +1,112 @@
 let organisation = document.getElementsByTagName("main")[0];
 let OrganizationList = document.getElementsByTagName("ul")[0];
-
-
-let json = [
-   
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "string",
-        "org": "Onsfritid",
-        "image": "bass64"
-    }
-]
-getOrg();
-let OrgShow = [];
-function init(){
-    createOrg(0);
-}
-
-window.onload = init;
 let uppload = document.getElementById("upploadbutton");
-uppload.addEventListener("click",event=> {
-    location.href = "createorg.html";
-})
 
+// let json = [
+   
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "string",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     }
+// ]
+let jsonOrg = [];
+function init(){
+    getOrg();
+    
+    
+    uppload.addEventListener("click",event=> {
+    location.href = "createorg.html";
+    })
+}
+window.onload = init;
 
 async function getOrg(){
-    let path = "https://omsorgapiapi.azure-api.net/Organization/User";
-    OrgShow = await getOrgFetch(path);
-    
+
+    let path = "https://omsorgapiapi.azure-api.net/Organization/User?=";
+
+    jsonOrg = await getOrgFetch(path);
+    for(let i=0;i<jsonOrg.length;i++){
+        createOrg();
+    }
 }
 
+async function createOrg() {
+    jsonOrg.forEach(element =>{
+        orgSection(element);
+        CreateOrgList(element);
+        console.log(orgSection);
+        console.log(jsonOrg); 
+        
+    })    
+}
 
 function CreateOrgList(element){
         let Orglist = document.createElement("li");
         let OrgName = document.createTextNode(element.org);
         Orglist.appendChild(OrgName);
         OrganizationList.appendChild(Orglist);
-
 }
-
- async function createOrg(cont) {
-    OrgShow.forEach(element =>{
-        orgSection(element);
-        CreateOrgList(element);
-    })
-}
-
 
 function orgSection(element){
     let Section = document.createElement("section");
@@ -113,7 +115,6 @@ function orgSection(element){
         Title.appendChild(OrgName);
         Section.appendChild(Title);
         organisation.appendChild(Section);
-        console.Log(OrgShow);
 }
 
 
