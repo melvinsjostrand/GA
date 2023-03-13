@@ -1,7 +1,7 @@
 let organisation = document.getElementsByTagName("main")[0];
 let OrganizationList = document.getElementsByTagName("ul")[0];
 let uppload = document.getElementById("upploadbutton");
-
+let orgInfo = document.getElementsByTagName("section");
 // let json = [
    
 //     {
@@ -76,8 +76,8 @@ function init(){
     
     
     uppload.addEventListener("click",event=> {
-    location.href = "createorg.html";
-    })
+        location.href = "createorg.html";
+    });
 }
 window.onload = init;
 
@@ -90,19 +90,7 @@ async function getOrg(){
         let element = jsonOrg[i];
         orgSection(element);
         CreateOrgList(element);
-        
-       // createOrg();
     }
-}
-
-async function createOrg() {
-    jsonOrg.forEach(element =>{
-        orgSection(element);
-        CreateOrgList(element);
-        console.log(orgSection);
-        console.log(jsonOrg); 
-        
-    })    
 }
 
 function CreateOrgList(element){
@@ -110,15 +98,23 @@ function CreateOrgList(element){
         let OrgName = document.createTextNode(element.org);
         Orglist.appendChild(OrgName);
         OrganizationList.appendChild(Orglist);
+
+        Orglist.addEventListener("click", event=>{
+            location.href = "organisation.html";
+        });
 }
 
 function orgSection(element){
-    let Section = document.createElement("section");
+        let Section = document.createElement("section");
         let Title = document.createElement("p");
         let OrgName = document.createTextNode(element.org);
         Title.appendChild(OrgName);
         Section.appendChild(Title);
         organisation.appendChild(Section);
+
+        Section.addEventListener("click", event=>{
+            location.href = "organisation.html";
+        });
 }
 
 
