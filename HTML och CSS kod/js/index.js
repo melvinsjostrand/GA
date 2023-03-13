@@ -87,7 +87,11 @@ async function getOrg(){
 
     jsonOrg = await getOrgFetch(path);
     for(let i=0;i<jsonOrg.length;i++){
-        createOrg();
+        let element = jsonOrg[i];
+        orgSection(element);
+        CreateOrgList(element);
+        
+       // createOrg();
     }
 }
 
