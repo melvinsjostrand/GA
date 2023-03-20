@@ -23,21 +23,28 @@ async function getFormData(){
     let end_time = form.elements.end_time.value;
     //let image = form.elements.fileinput.files;
 
-    start_time = st;
-    end_time = et;
-    let st = new Date(start_time).replace('T', '');
-    let et = new Date(end_time).replace('T', '');
+const st = start_time.split("T")
+const et = end_time.split("T")
 
-        console.log(start_time);
-        console.log(end_time);
+
+        console.log(et[1])
+        console.log(et[0])
+        console.log(st[1])
+        console.log(st[0])
+       // console.log(start_time);
+      //  console.log(end_time);
         console.log(location);
         console.log(upload_information);
-        console.log(st);
-        console.log(et);
         Json={            
             "location":location,
-            "start_time":start_time,
-            "end_time":end_time,
+            "start":{
+                "date":st[0],
+                "time":st[1]
+            },
+            "end":{
+                "date":st[0],
+                "time":st[1]
+            },
             "upload_information":upload_information
         }
 
