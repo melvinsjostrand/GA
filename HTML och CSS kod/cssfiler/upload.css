@@ -12,50 +12,6 @@ body{
     margin-top: 1rem;
 }
 
-/*Nav*/
-
-#mainheader{
-    display: grid;
-    grid-template-rows: auto;
-    justify-content: center;
-    justify-items: center;
-    margin-bottom: 2rem;
-}
-header ul{
-    margin: 0;
-    padding: 0;
-
-}
-h1{
-    display: none;
-}
-header a{
-    font-size: 4.2em;
-    color: black;
-}
-header a:active {
-    text-decoration: none;
-}
-#activities{
-    grid-row: 1;
-}
-#week{
-    grid-row: 2;
-}
-#month{
-    grid-row: 3;
-}
-#account{
-    grid-row: 4;
-}
-#back_button{
-    grid-row: 5;
-}
-
-header nav ul{
-    list-style-type: none;
-}
-
 
 /*Media Screen min*/
 
@@ -119,6 +75,13 @@ header nav ul{
         height: 50%;
         place-self: center;
     }
+    #act{
+        grid-column: 1/1;
+        grid-row: 1;
+        width: 50%;
+        height: 50%;
+        place-self: center;
+    }
     #upload_information{
         grid-column: 2;
         grid-row: 1/4;
@@ -159,6 +122,13 @@ header nav ul{
         margin-right: 2rem;
         margin-left: 1rem;
     }
+    #act {
+        width: 80%;
+        height: 80%;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
 
 }
 
@@ -187,6 +157,14 @@ header nav ul{
     color: black;
 }
 
+#act {
+    place-self: center;
+    grid-column:1/1;
+    grid-row: 1;
+    background-color: rgb(201, 201, 201);
+    font-size: 2em;
+    color: black;
+}
 #start_time {
     place-self: center;
     grid-column: 1/1;
