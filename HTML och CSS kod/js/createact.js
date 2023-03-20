@@ -27,10 +27,11 @@ const st = start_time.split("T")
 const et = end_time.split("T")
 
 
-        console.log(et[1])
-        console.log(et[0])
-        console.log(st[1])
+
         console.log(st[0])
+        console.log(st[1])
+        console.log(et[0])
+        console.log(et[1])
        // console.log(start_time);
       //  console.log(end_time);
         console.log(location);
@@ -42,8 +43,8 @@ const et = end_time.split("T")
                 "time":st[1]
             },
             "end":{
-                "date":st[0],
-                "time":st[1]
+                "date":et[0],
+                "time":et[1]
             },
             "upload_information":upload_information
         }

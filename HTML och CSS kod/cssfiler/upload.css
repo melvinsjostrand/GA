@@ -175,6 +175,7 @@ header nav ul{
     text-align: center;
     place-self: center;
     overflow: hidden;
+    margin-left: 100px;
 }
 
 #location {
