@@ -12,6 +12,10 @@ header ul{
 h1{
     display: none;
 }
+button{
+    font-size: 2em;
+    margin-top: 15px;
+}
 header a{
     font-size: 3.9em;
     color: black;
@@ -35,7 +39,7 @@ header nav ul{
 }
 
 @media only screen and (min-width: 820px) {
-    a {
+   header a {
         font-size: 3.9em;
     }
     #mainheader {
