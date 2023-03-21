@@ -4,6 +4,7 @@ creatact.addEventListener("click",event=> {
 })
  
 let activities;
+let jsonOrg = [];
 
 let json = {
     "org": "test",
@@ -16,11 +17,11 @@ let json = {
             "actId": "int",
             "org": "string",
             "act": "string",
-            "info": "string",
+            "info": "Bowling",
             "place": "string",
             "start": {
-                "date": "string",
-                "time": "string"
+                "date": "21/03",
+                "time": "13.00"
             },
             "end": {
                 "date": "string",
@@ -264,37 +265,56 @@ window.onload = init;
 
 
 
-function getjson() {
-    getName();
+async function getjson(){
 
-    json.activities.forEach(element=>{
+    let path = "https://omsorgapiapi.azure-api.net/Activity/org/1";
+
+    jsonOrgTag = await getOrg(path);
+
+    console.log(jsonOrgTag);
+
+    jsonOrgTag.activities.forEach(element=>{
         createActivity(element);
+        getName(element);
+        createdescription(element);
     })
     
-}
-
-
-function getName() {
-    let Orgpos = document.getElementById("organisation-name");
-    let Orgpos1 = document.getElementById("Organisation-description");
-    let OrgNameTag = document.getElementsByTagName("h2");
-    let OrgName = document.createTextNode(json.org);
-    OrgNameTag[0].appendChild(OrgName);
-    Orgpos.appendChild(OrgNameTag[0]);
-    console.log(Orgpos);
-
-    OrgName = document.createTextNode(json.org);
-    OrgNameTag[1].appendChild(OrgName);
-    Orgpos1.appendChild(OrgNameTag[1]);
-}
-
-function createActivity(el){
+    function createActivity(element){
     let paragraph = document.createElement("p");
-    let text = el.start.date + " " + el.info; 
+    let text = element.start.date + " " + element.info + " " + element.start.time; 
     let tN = document.createTextNode(text);
     paragraph.appendChild(tN);
     activities.appendChild(paragraph);
 }
 
+function getName(element) {
+    let Orgpos = document.getElementById("organisation-name");
+    let OrgNameTag = document.getElementsByTagName("h2");
+    let OrgName = document.createTextNode(jsonOrgTag.org);
+    OrgNameTag[0].appendChild(OrgName);
+    Orgpos.appendChild(OrgNameTag[0]);
+    console.log(Orgpos);
+}
 
+function createdescription(elemtent){
+    let Orgpos1 = document.getElementById("Organisation-description");
+    let OrgDescriptionTag = document.createElement("p");
+    let OrgDescription = document.createTextNode(jsonOrgTag.description);
+    OrgDescriptionTag.appendChild(OrgDescription);
+    Orgpos1.appendChild(OrgDescriptionTag);
+    console.log(OrgDescriptionTag);
+}
+
+}
+
+
+
+ 
+
+
+async function getOrg(path){
+    let response = await fetch(path);
+    let json = await response.json();
+    return json;
+}
 

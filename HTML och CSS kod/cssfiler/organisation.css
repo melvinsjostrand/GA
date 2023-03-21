@@ -39,7 +39,7 @@ img {
 
 @media only screen and (min-width: 820px) {
     main {
-        grid-template-rows: auto 400px 1fr 1fr ;
+        grid-template-rows: auto 400px 1fr;
     }
     main > section {
         display: grid;
@@ -79,6 +79,8 @@ img {
     #text  {
         grid-column: 2;
         background-color: var(--go-back--color);
+        overflow: scroll;
+        height: 30vh;
     }
     section > img {
         grid-column: 3;
