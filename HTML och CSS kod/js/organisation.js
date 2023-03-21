@@ -4,257 +4,257 @@ creatact.addEventListener("click",event=> {
 })
  
 let activities;
-let jsonOrg = [];
+let jsonOrgTag = [];
 
-let json = {
-    "org": "test",
-    "description": "Alla blaakasjdjfaliunvipartbauih vpnautilsef",
-    "image": "string",
-    "url": "string",
-    "orgCode": "string",
-    "activities": [
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "Bowling",
-            "place": "string",
-            "start": {
-                "date": "21/03",
-                "time": "13.00"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        },
-        {
-            "actId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
-            }
-        }
-    ]
-}
+// let json = {
+//     "org": "test",
+//     "description": "Alla blaakasjdjfaliunvipartbauih vpnautilsef",
+//     "image": "string",
+//     "url": "string",
+//     "orgCode": "string",
+//     "activities": [
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "Bowling",
+//             "place": "string",
+//             "start": {
+//                 "date": "21/03",
+//                 "time": "13.00"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         },
+//         {
+//             "actId": "int",
+//             "org": "string",
+//             "act": "string",
+//             "info": "string",
+//             "place": "string",
+//             "start": {
+//                 "date": "string",
+//                 "time": "string"
+//             },
+//             "end": {
+//                 "date": "string",
+//                 "time": "string"
+//             }
+//         }
+//     ]
+// }
 
 function init() {
     activities = document.getElementById("text");
@@ -271,14 +271,12 @@ async function getjson(){
 
     jsonOrgTag = await getOrg(path);
 
-    console.log(jsonOrgTag);
-
+    getName();
+    createdescription();
     jsonOrgTag.activities.forEach(element=>{
         createActivity(element);
-        getName(element);
-        createdescription(element);
     })
-    
+
     function createActivity(element){
     let paragraph = document.createElement("p");
     let text = element.start.date + " " + element.info + " " + element.start.time; 
@@ -287,7 +285,7 @@ async function getjson(){
     activities.appendChild(paragraph);
 }
 
-function getName(element) {
+function getName() {
     let Orgpos = document.getElementById("organisation-name");
     let OrgNameTag = document.getElementsByTagName("h2");
     let OrgName = document.createTextNode(jsonOrgTag.org);
@@ -296,7 +294,7 @@ function getName(element) {
     console.log(Orgpos);
 }
 
-function createdescription(elemtent){
+function createdescription(){
     let Orgpos1 = document.getElementById("Organisation-description");
     let OrgDescriptionTag = document.createElement("p");
     let OrgDescription = document.createTextNode(jsonOrgTag.description);
