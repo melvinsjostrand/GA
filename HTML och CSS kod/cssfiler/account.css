@@ -1,9 +1,7 @@
-:root{
-    background-color: green;
-}
+
 .wrapper{
     position: relative;
-    width: 400px;
+    width: 350px;
     height: 440px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
@@ -34,14 +32,14 @@
 
 .wrapper.active .form-box.login{
  transition: none;
- transform: translateX(-400px);
+ transform: translateX(-450px);
  }
 
 
 .wrapper .form-box.register{
     position: absolute;
     transition: none;
-    transform: translateX(400px);
+    transform: translateX(450px);
 }
 .wrapper.active .form-box.register{
     transition: transform .18s ease;
@@ -70,7 +68,7 @@
 }
 .input-box{
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 50px;
     border-bottom: 2px solid #162938;
     margin:30px;
@@ -78,7 +76,7 @@
 .input-box label{
     position: absolute;
     top: 50%;
-    left: 5px;
+    left: 15px;
     transform: translate(-40%);
     font-size: 1em;
     color: #162938;
