@@ -267,7 +267,7 @@ window.onload = init;
 
 async function getjson(){
 
-    let path = "https://omsorgapiapi.azure-api.net/Activity/org/1";
+    let path = "https://omsorgapiapi.azure-api.net/Activity/org/2";
 
     jsonOrgTag = await getOrg(path);
 

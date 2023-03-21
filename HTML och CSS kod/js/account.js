@@ -18,3 +18,8 @@ btnPopup.addEventListener('click', ()=>{
 iconClose.addEventListener('click', ()=>{
     wrapper.classList.remove('active-popup');
 });
+
+function myFunction() {
+  let popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}

@@ -117,7 +117,6 @@ function orgSection(element){
         });
 }
 
-
 async function getOrgFetch(path){
     let response = await fetch(path);
     let json = await response.json();
