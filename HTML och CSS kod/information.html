@@ -35,17 +35,41 @@
     </header>
     <main>
         <a id='back_button' href="javascript:history.back()">Gå tillbaka</a>
-
         <section class="gridsection grid">
             <h2 id="day"></h2>
             <div class="Dag-Infokalender">
                 <p id="time"></p>
             </div>
           </section>
-
           <div class="gridsection2 ">
-            
         </div>
     </main>
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" name="email" id="haveaccemail" required>
+                    <label for="haveaccemail" >Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" name="password" id="haveaccpassword" required>
+                    <label for="haveaccpassword" >Lösenord</label>
+                </div>
+                <div class="remeber-forgot">
+                    <label><input  type="checkbox" name="remeber-forgot" id="remeber-forgot" name="remeber-forgot">Håll mig inloggad</label> 
+                    <a href="">Glömt Lösenord?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Har du inte ett konto?
+                        <a class="register-link">Skapa konto</a>
+                    </p>
+                </div>
+            </form>
+        </div>
 </body>
 </html>
