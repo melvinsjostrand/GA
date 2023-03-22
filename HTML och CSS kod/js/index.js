@@ -83,7 +83,7 @@ window.onload = init;
 
 async function getOrg(){
 
-    let path = "https://omsorgapiapi.azure-api.net/Organization/User?=";
+    let path = "https://omsorgapi.azurewebsites.net/Organization/user";
 
     jsonOrg = await getOrgFetch(path);
     for(let i=0;i<jsonOrg.length;i++){

@@ -1,7 +1,6 @@
 
 .wrapper{
-    position: relative;
-    bottom: 1em;
+    position: absolute;
     width: 350px;
     height: 440px;
     background-color: transparent;
@@ -15,11 +14,12 @@
     overflow: hidden;
     transition: transform .5s ease, height .2s ease;
     transform:scale(0);
-    margin-left: auto;
-    margin-right: auto;
+    justify-self: center;
+    margin-top: 30px;
 }
 .wrapper.active-popup{
     transform: scale(1);
+    z-index: 9;
 }
 .wrapper.active{
     height: 520px;
