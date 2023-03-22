@@ -49,8 +49,7 @@ const et = end_time.split("T")
             "end":{
                 "date":et[0],
                 "time":et[1]
-            },
-            "upload_information":upload_information
+            }
         }
 
         console.log(Json);
