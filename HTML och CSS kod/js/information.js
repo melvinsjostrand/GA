@@ -37,45 +37,64 @@ let json =[
 //     },
 let Jsonactivity = json;
 
-let time;
-
 function init(){
+    activities();
 
 
-    time = document.getElementById("time");
-    console.log(time);
+}
 
-    Jsonactivity.forEach(element=>{
-        console.log(element);
-        time.innerHTML = element.tid + " " + element.org;
-        createSection(element);
-    })
+function activities(){
 
+    for(let i=0;i<Jsonactivity.length;i++){
+        let element = Jsonactivity[i];
+        daycalendar(element);
+    }
 }
 
 window.onload = init;
 
-function createSection(element){
+// function day(element){
 
-    let position = document.getElementsByClassName("gridsection2");
-    let section = document.createElement("section");
-    console.log(section);
+// }
 
-    let title = document.createElement("h3");
-    title = element.org;
-    position.appendChild(title);
+function daycalendar(element)  {
+    let calendar = document.getElementsByClassName("Dag-Infokalender");
+    let paragraph = document.createElement("p");
+    let orgplustime = element.time + " " + element.org;
+    console.log(orgplustime);
+    orgplustime.appendChild(paragraph);
+    calendar.appendChild(paragraph);
+    console.log(calendar);
+}
+
+
+
+
+
+
+
+
+// function createSection(element){
+
+//     let position = document.getElementsByClassName("gridsection2");
+//     let section = document.createElement("section");
+//     console.log(section);
+
+//     let title = document.createElement("h3");
+//     title = element.org;
+//     position.appendChild(title);
    
 
-    let paragraph = document.createElement("p");
-    let t = el.tid + " " + el.info;
-    let text = document.createTextNode(t);
-    paragraph.appendChild(text);
-    console.log(paragraph);
-    section.appendChild(paragraph);
-    console.log(section);
+//     let paragraph = document.createElement("p");
+//     let t = el.tid + " " + el.info;
+//     let text = document.createTextNode(t);
+//     paragraph.appendChild(text);
+//     console.log(paragraph);
+//     section.appendChild(paragraph);
+//     console.log(section);
 
-    sections[0].appendChild(section);
-    }
+//     sections[0].appendChild(section);
+//     }
 
 // async function getFetch(path){
 //     const response = await fetch(path);

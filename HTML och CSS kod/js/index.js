@@ -85,7 +85,7 @@ async function getOrg(){
 
     let path = "https://omsorgapi.azurewebsites.net/Organization/user";
 
-    // jsonOrg = await getOrgFetch(path);
+    jsonOrg = await getOrgFetch(path);
     for(let i=0;i<jsonOrg.length;i++){
         let element = jsonOrg[i];
         orgSection(element);
