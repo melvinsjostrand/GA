@@ -1,5 +1,4 @@
 let form;
-
 function init(){
 
     form = document.querySelector("form");
@@ -41,16 +40,16 @@ async function getFormData(){
 
 
 async function postFetch(json, /*token*/){
-    let path = "https://omsorgapiapi.azure-api.net/Login";
+    let path = "https://omsorgapi.azurewebsites.net/Login";
     let password = form.elements.createaccpassword.value;
     let username = form.elements.createaccusername.value;
     console.log(username);
     console.log(password);
     const response = await fetch(path ,{
-        method:"post",
+        method:"POST",
         mode:"cors",
-        Headers:{
-            "content-type":"application/json"
+        headers:{
+            "content-type":"application/json",
           "Authorization": "Basic: " + btoa(username+":"+password)
         },
         body:JSON.stringify(json)

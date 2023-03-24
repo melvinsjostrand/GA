@@ -118,7 +118,12 @@ function orgSection(element){
 }
 
 async function getOrgFetch(path){
-    let response = await fetch(path);
+    console.log(localStorage.getItem("GUID"));
+    let response = await fetch(path, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
+    });
     let json = await response.json();
     return json;
 }

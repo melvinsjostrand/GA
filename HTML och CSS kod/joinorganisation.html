@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./headerfooter/header.css">
     <link rel="stylesheet" href="./cssfiler/account.css">
-    <script src="./js/login.js" defer></script>
+    <script src="./js/joinorganisation.js" defer></script>
     <title>Kontosida - omsorgsapp</title>
 </head>
 
@@ -35,21 +35,19 @@
     </header>
         <main id="myPopup" class="wrapper">
             <section class="form-box login">
-                <h2>Login<span id="error"></span></h2>
+                <h2>Gå med i organisation <span id="error"></span>
+                </h2>
                 <form action="#">
                     <p class="input-box">
-                        <label for="account" >Email/Telefonnummer</label>
+                        <label for="account" >Organisations nyckel</label>
                         <input type="text" name="account" id="account" required>
                     </p>
                     <p class="input-box">
-                        <label for="password" >Lösenord</label>
-                        <input type="password" name="password" id="password" required>
+                        <label for="password" >Favorit</label>
+                        <input type="checkbox" name="password" id="password" value = "yes">
                     </p>
-                    <button type="submit" class="btn" name="login" value="login">Logga in</button>
+                    <button type="submit" class="btn" name="login" value="login">Gå med</button>
                     <div class="login-register">
-                        <p>Har du inte ett konto?
-                            <a class="register-link" href="createaccount.html">Skapa konto</a>
-                        </p>
                     </div>
                 </form>
             </section>
