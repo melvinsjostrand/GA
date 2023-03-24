@@ -2,90 +2,90 @@ let organisation = document.getElementsByTagName("main")[0];
 let OrganizationList = document.getElementsByTagName("ul")[0];
 let uppload = document.getElementById("upploadbutton");
 let orgInfo = document.getElementsByTagName("section");
-// let json = [
+let orgId;
+let json = [
    
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsdagis",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsdagis",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsdagis",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsdagis",
-//         "image": "bass64"
-//     },
-//     {
-//         "orgId": "string",
-//         "org": "Onsfritid",
-//         "image": "bass64"
-//     }
-// ]
-let jsonOrg = [];
+    {
+        "orgId": "1",
+        "org": "Onsfritid",
+        "image": "bass64"
+    },
+    {
+        "orgId": "2",
+        "org": "Onsfritid",
+        "image": "bass64"
+    },
+    {
+        "orgId": "3",
+        "org": "Onsdagis",
+        "image": "bass64"
+    },
+    {
+        "orgId": "4",
+        "org": "Onsfritid",
+        "image": "bass64"
+    },
+    {
+        "orgId": "5",
+        "org": "Onsfritid",
+        "image": "bass64"
+    },
+    {
+        "orgId": "6",
+        "org": "Onsdagis",
+        "image": "bass64"
+    },
+    {
+        "orgId": "7",
+        "org": "Onsfritid",
+        "image": "bass64"
+    },
+    {
+        "orgId": "8",
+        "org": "Onsfritid",
+        "image": "bass64"
+    },
+    {
+        "orgId": "9",
+        "org": "Onsdagis",
+        "image": "bass64"
+    },
+    {
+        "orgId": "10",
+        "org": "Onsfritid",
+        "image": "bass64"
+    }
+]
+    let jsonOrg = json;
+    
+    //get ids
+    var response = jsonOrg;
+    var dataIds = response;
+    dataIds.forEach(element => console.log(element.orgId));
+
+
 function init(){
     getOrg();
     
     
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    orgId = Number(urlParams.get("Id"));
+    
+    
+
     uppload.addEventListener("click",event=> {
         location.href = "createorg.html";
     });
 }
 window.onload = init;
 
+
 async function getOrg(){
 
     let path = "https://omsorgapi.azurewebsites.net/Organization/user";
 
-    jsonOrg = await getOrgFetch(path);
+    // jsonOrg = await getOrgFetch(path);
     for(let i=0;i<jsonOrg.length;i++){
         let element = jsonOrg[i];
         orgSection(element);
@@ -100,11 +100,11 @@ function CreateOrgList(element){
         OrganizationList.appendChild(Orglist);
 
         Orglist.addEventListener("click", event=>{
-            location.href = "organisation.html";
+            location.href = "organisation.html?Id="+ orgId;
         });
 }
 
-function orgSection(element){
+function orgSection(element, orgId){
         let Section = document.createElement("section");
         let Title = document.createElement("p");
         let OrgName = document.createTextNode(element.org);
@@ -113,7 +113,7 @@ function orgSection(element){
         organisation.appendChild(Section);
 
         Section.addEventListener("click", event=>{
-            location.href = "organisation.html";
+            location.href = "organisation.html?Id="+ orgId;
         });
 }
 

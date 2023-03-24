@@ -7,6 +7,7 @@ let activities;
 let jsonOrgTag = [];
 
 // let json = {
+//     "orgId": "1",
 //     "org": "test",
 //     "description": "Alla blaakasjdjfaliunvipartbauih vpnautilsef",
 //     "image": "string",
@@ -260,6 +261,10 @@ function init() {
     activities = document.getElementById("text");
     getjson();
 
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    orgId = Number(urlParams.get("Id"));
 }
 window.onload = init;
 
@@ -267,7 +272,7 @@ window.onload = init;
 
 async function getjson(){
 
-    let path = "https://omsorgapiapi.azure-api.net/Activity/org/2";
+    let path = "https://omsorgapiapi.azure-api.net/Activity/org/";
 
     jsonOrgTag = await getOrg(path);
 
