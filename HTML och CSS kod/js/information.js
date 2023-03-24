@@ -402,15 +402,12 @@ function createSection(element){
 }
 
 async function getactFetch(path){
-    console.log(path);
-    const response = await fetch(path);
-    // const response = await fetch(path,{
-    //     method:"GET",
-    //     mode:"cors",
-    //     headers:{
-    //         "authorization":"c66eae1a-c8a2-4822-84f4-6a76fb32f3a3"
-    //     }
-    // });
-    const json = await response.json();
-    return json
+    console.log(localStorage.getItem("GUID"));
+    let response = await fetch(path, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
+    });
+    let json = await response.json();
+    return json;
 }

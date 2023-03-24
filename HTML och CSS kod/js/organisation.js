@@ -323,7 +323,12 @@ async function getjson(){
 
 
 async function getOrg(path){
-    let response = await fetch(path);
+    console.log(localStorage.getItem("GUID"));
+    let response = await fetch(path, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
+    });
     let json = await response.json();
     return json;
 }
