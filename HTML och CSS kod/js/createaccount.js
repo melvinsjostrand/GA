@@ -15,15 +15,13 @@ function init(){
 window.onload = init;
 
 async function getFormData(){
-    let username = form.elements.createaccusername.value;
+    
     let email = form.elements.createaccemail.value;
-    let password = form.elements.createaccpassword.value;
+    
     let phonenumber = form.elements.createaccphonenumber.value;
 
   
-    console.log(username);
     console.log(email);
-    console.log(password);
     console.log(phonenumber);
 
 
@@ -43,14 +41,17 @@ async function getFormData(){
 
 
 async function postFetch(json, /*token*/){
-    let path = "https://omsorgapiapi.azure-api.net/User";
-
+    let path = "https://omsorgapiapi.azure-api.net/Login";
+    let password = form.elements.createaccpassword.value;
+    let username = form.elements.createaccusername.value;
+    console.log(username);
+    console.log(password);
     const response = await fetch(path ,{
         method:"post",
         mode:"cors",
         Headers:{
             "content-type":"application/json"
-          /*  "Authorization": "Basic: " + btoa(username:password) */
+          "Authorization": "Basic: " + btoa(username+":"+password)
         },
         body:JSON.stringify(json)
     })
