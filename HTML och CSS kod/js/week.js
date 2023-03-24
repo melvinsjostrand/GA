@@ -87,7 +87,7 @@ async function getweek(){
         //hitta aktiviteter
  
         jDay[i].activities.forEach(element =>{
-            createP(element,jDay[i].day);
+            createP(element,jDay[i].day.toLowerCase);
             }
         
         )

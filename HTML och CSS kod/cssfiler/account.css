@@ -5,7 +5,7 @@ body{
 
 .wrapper{
     position: relative;
-    width: 850px;
+    width: 1200px;
     height: 740px;
     display: flex;
     justify-content: center;
@@ -29,14 +29,14 @@ body{
 
 .wrapper.active .form-box.login{
  transition: none;
- transform: translateX(-1000px);
+ transform: translateX(-2000px);
  }
 
 
 .wrapper .form-box.register{
     position: absolute;
     transition: none;
-    transform: translateX(1000px);
+    transform: translateX(2000px);
 }
 .wrapper.active .form-box.register{
     transition: transform .18s ease;
@@ -49,49 +49,11 @@ body{
     color: #162938;
     text-align: center;
 }
+
+
 .input-box{
-    position: relative;
-    width: 80%;
-    height: 50px;
-    border-bottom: 2px solid #162938;
-    margin:30px;
-}
-.input-box label{
-    position: absolute;
-    top: 20%;
-    left: 60px;
-    transform: translate(-40%);
     font-size: 2em;
-    color: #162938;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
 }
-
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
-}
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background:transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #162938;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-.input-box .icon{
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #162938;
-    line-height: 57px;
-}
-
-
 .btn{
     width: 80%;
     height: 45px;
@@ -107,7 +69,6 @@ body{
 .login-register{
     font-size: 2em;
     color: #162938;
-    text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
@@ -115,7 +76,4 @@ body{
     color: #162938;
     text-decoration: none;
     font-weight: 600;
-}
-.login-register p a:hover{
-    text-decoration: underline;
 }

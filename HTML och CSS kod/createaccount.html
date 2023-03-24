@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./headerfooter/header.css">
+    <link rel="stylesheet" href="./cssfiler/account.css">
+    <script src="./js/account.js" defer></script>
+    <title>Kontosida - omsorgsapp</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Kontosida
+        </h1>
+        <nav>
+            <ul id="mainheader">
+                <li id="activities">
+                    <a  href="index.html">Aktiviteter</a>
+                </li>
+                <li id="week">
+                    <a  href="week.html">Vecka</a>
+                </li>
+                <li id="month">
+                    <a  href="month.html">Månad</a>
+                </li>
+                <li id="account">
+                    <a href="account.html">Logga in</a>
+                </li>
+            </ul>
+        
+        </nav>
+    </header>
+<main class="wrapper">
+    <section class="form-box register">
+        <h2>Skapa konto</h2>
+        <form action="#">
+            <p class="input-box">
+                <label for="createaccusername" >Användarnamn</label>
+                <input type="text" name="createaccusername" id="createaccusername" required>
+            </p>
+            <p class="input-box">
+                <label for="createaccemail" >Email</label>
+                <input type="email" name="createaccemail" id="createaccemail" >
+            </p>
+            <p class="input-box">
+                <label for="createaccphonenumber" >Telefonnummer</label>
+                <input type="tel" name="createaccphonenumber" id="createaccphonenumber" >
+            </p>
+            <p class="input-box">
+                <label for="createaccpassword" >Lösenord</label>
+                <input type="password" name="createaccpassword" id="createaccpassword" required>
+            </p>
+
+            <button type="submit" class="btn" name="register" value="Register">registrera konto</button>
+            <div class="login-register">
+                <p>Har du redan ett konto?
+                    <a class="login-link">Logga in</a>
+                </p>
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>

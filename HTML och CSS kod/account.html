@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./headerfooter/header.css">
     <link rel="stylesheet" href="./cssfiler/account.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
     <script src="./js/account.js" defer></script>
     <title>Kontosida - omsorgsapp</title>
 </head>
@@ -29,61 +27,32 @@
                     <a  href="month.html">Månad</a>
                 </li>
                 <li id="account">
-                    <button class="btnlogin-popup">Login</button>
+                    <a href="account.html">Logga in</a>
                 </li>
             </ul>
         
         </nav>
     </header>
-        <div id="myPopup" class="wrapper">
-            <div class="form-box login">
+        <main id="myPopup" class="wrapper">
+            <section class="form-box login">
                 <h2>Login</h2>
                 <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                        <input type="email" name="email" id="haveaccemail" required>
-                        <label for="haveaccemail" >Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <input type="password" name="password" id="haveaccpassword" required>
+                    <p class="input-box">
+                        <label for="haveaccemail" >Email/Telefonnummer</label>
+                        <input type="text" name="email" id="haveaccemail" required>
+                    </p>
+                    <p class="input-box">
                         <label for="haveaccpassword" >Lösenord</label>
-                    </div>
-                    <input type="submit" class="btn" name="login" value="login"></input>
+                        <input type="password" name="password" id="haveaccpassword" required>
+                    </p>
+                    <button type="submit" class="btn" name="login" value="login">Logga in</button>
                     <div class="login-register">
                         <p>Har du inte ett konto?
                             <a class="register-link">Skapa konto</a>
                         </p>
                     </div>
                 </form>
-            </div>
-            <div class="form-box register">
-                <h2>Skapa konto</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <input type="text" name="createaccusername" id="createaccusername" required>
-                        <label for="createaccusername" >Användarnamn</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                        <input type="email" name="createaccemail" id="createaccemail" required>
-                        <label for="createaccemail" >Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <input type="password" name="createaccpassword" id="createaccpassword" required>
-                        <label for="createaccpassword" >Lösenord</label>
-                    </div>
-
-                    <input type="submit" class="btn" name="register" value="Register"></input>
-                    <div class="login-register">
-                        <p>Har du redan ett konto?
-                            <a class="login-link">Logga in</a>
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
+            </section>
+        </main>
 </body>
 </html>

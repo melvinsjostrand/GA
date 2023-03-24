@@ -33,16 +33,19 @@ async function getFormData(){
     let createaccusername = form.elements.createaccusername.value;
     let createaccemail = form.elements.createaccemail.value;
     let createaccpassword = form.elements.createaccpassword.value;
+    let createaccphonenumber = form.elements.createaccphonenumber.value;
     createaccpassword =password;
     createaccusername = username;
 
     console.log(createaccemail);
     console.log(createaccpassword);
     console.log(createaccusername);
+    console.log(createaccphonenumber);
 
 
 Json = {
-"mail":createaccemail
+"mail":createaccemail,
+"phone":createaccphonenumber
 }
 
 
