@@ -1,38 +1,53 @@
-let json =[{
-    "date": "230324",
-    "day": "fredag",
-    "activities": [
-        {
-            "actId": "int",
-            "orgId": "int",
-            "org": "string",
-            "act": "string",
-            "info": "string",
-            "place": "string",
-            "start": {
-                "date": "string",
-                "time": "string"
-            },
-            "end": {
-                "date": "string",
-                "time": "string"
+let json =[
+    {
+        "date": "230324",
+        "day": "fredag",
+        "activities": 
+        [
+            {
+                "actId": "int",
+                "orgId": "int",
+                "org": "Fritid",
+                "act": "bowlings",
+                "info": "informationadasdgeargartadfgawerfasdfag",
+                "place": "location",
+                "start": 
+                {
+                    "date": "2303245",
+                    "time": "13.00"
+                },
+                "end": 
+                {
+                    "date": "string",
+                    "time": "string"
+                }
             }
-        }
-    ]
-}
+        ]
+    }
 ]
 
+
+// Json={            
+//     "place":location,
+//     "act":act,
+//     "info":upload_information,
+//     "start":{
+//         "date":st[0],
+//         "time":st[1]
+//     },
+let Jsonactivity = json;
 
 let time;
 
 function init(){
+
+
     time = document.getElementById("time");
     console.log(time);
 
-    json.forEach(element=>{
+    Jsonactivity.forEach(element=>{
         console.log(element);
         time.innerHTML = element.tid + " " + element.org;
-
         createSection(element);
     })
 
@@ -40,18 +55,15 @@ function init(){
 
 window.onload = init;
 
-function createSection(el){
+function createSection(element){
 
-    let sections = document.getElementsByClassName("gridsection2");
-    console.log(sections[0]);
-
+    let position = document.getElementsByClassName("gridsection2");
     let section = document.createElement("section");
-  
-    let h3 = document.createElement("h3");
-    h3.innerHTML = el.org;
-    console.log(h3);
+    console.log(section);
 
-    section.appendChild(h3);
+    let title = document.createElement("h3");
+    title = element.org;
+    position.appendChild(title);
    
 
     let paragraph = document.createElement("p");
@@ -63,7 +75,7 @@ function createSection(el){
     console.log(section);
 
     sections[0].appendChild(section);
-}
+    }
 
 // async function getFetch(path){
 //     const response = await fetch(path);
