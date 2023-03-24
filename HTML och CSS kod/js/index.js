@@ -3,60 +3,60 @@ let OrganizationList = document.getElementsByTagName("ul")[0];
 let uppload = document.getElementById("upploadbutton");
 let orgInfo = document.getElementsByTagName("section");
 let orgId;
-let json = [
+// let json = [
    
-    {
-        "orgId": "1",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "2",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "3",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "4",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "5",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "6",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "7",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "8",
-        "org": "Onsfritid",
-        "image": "bass64"
-    },
-    {
-        "orgId": "9",
-        "org": "Onsdagis",
-        "image": "bass64"
-    },
-    {
-        "orgId": "10",
-        "org": "Onsfritid",
-        "image": "bass64"
-    }
-]
-    let jsonOrg = json;
+//     {
+//         "orgId": "1",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "2",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "3",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "4",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "5",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "6",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "7",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "8",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "9",
+//         "org": "Onsdagis",
+//         "image": "bass64"
+//     },
+//     {
+//         "orgId": "10",
+//         "org": "Onsfritid",
+//         "image": "bass64"
+//     }
+// ]
+    let jsonOrg = [];
     
     //get ids
     var response = jsonOrg;
@@ -69,6 +69,7 @@ function init(){
     
     
     const queryString = window.location.search;
+    console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     orgId = Number(urlParams.get("Id"));
     
@@ -100,11 +101,11 @@ function CreateOrgList(element){
         OrganizationList.appendChild(Orglist);
 
         Orglist.addEventListener("click", event=>{
-            location.href = "organisation.html?Id="+ orgId;
+            location.href = "organisation.html?Id="+ element.orgId;
         });
 }
 
-function orgSection(element, orgId){
+function orgSection(element){
         let Section = document.createElement("section");
         let Title = document.createElement("p");
         let OrgName = document.createTextNode(element.org);
@@ -113,7 +114,7 @@ function orgSection(element, orgId){
         organisation.appendChild(Section);
 
         Section.addEventListener("click", event=>{
-            location.href = "organisation.html?Id="+ orgId;
+            location.href = "organisation.html?Id="+ element.orgId;
         });
 }
 

@@ -1,7 +1,27 @@
-let json =[
-        {org:"Omsfritid",dag:"230214",tid:"12:00", info:"Pizza"},
-        {org:"Omsfritid",dag:"230214",tid:"14:00", info:"Bowling"},
-];
+let json =[{
+    "date": "230324",
+    "day": "fredag",
+    "activities": [
+        {
+            "actId": "int",
+            "orgId": "int",
+            "org": "string",
+            "act": "string",
+            "info": "string",
+            "place": "string",
+            "start": {
+                "date": "string",
+                "time": "string"
+            },
+            "end": {
+                "date": "string",
+                "time": "string"
+            }
+        }
+    ]
+}
+]
+
 
 let time;
 
@@ -45,8 +65,8 @@ function createSection(el){
     sections[0].appendChild(section);
 }
 
-async function getFetch(path){
-    const response = await fetch(path);
-    const json = await response.json();
-    return json
-}
+// async function getFetch(path){
+//     const response = await fetch(path);
+//     const json = await response.json();
+//     return json
+// }
