@@ -258,6 +258,12 @@ let jsonOrgTag = [];
 // }
 
 function init() {
+
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    orgId = Number(urlParams.get("Id"));
+
     activities = document.getElementById("text");
     getjson();
 }
@@ -266,10 +272,6 @@ window.onload = init;
 
 
 async function getjson(){
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    orgId = Number(urlParams.get("Id"));
-    console.log(orgId);
 
     let path = "https://omsorgapiapi.azure-api.net/Activity/org/" + orgId;
     console.log(path);
@@ -300,13 +302,17 @@ async function getjson(){
         console.log(Orgpos);
     }
 
-    function createdescription(){
+    function createdescription(element){
         let Orgpos1 = document.getElementById("Organisation-description");
         let OrgDescriptionTag = document.createElement("p");
         let OrgDescription = document.createTextNode(jsonOrgTag.description);
         OrgDescriptionTag.appendChild(OrgDescription);
         Orgpos1.appendChild(OrgDescriptionTag);
         console.log(OrgDescriptionTag);
+
+        Orgpos1.addEventListener("click", event=>{
+            location.href = "information.html?Id="+ element.orgId;
+        });
     }
 
 }
