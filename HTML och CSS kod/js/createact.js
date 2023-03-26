@@ -64,7 +64,7 @@ const et = end_time.split("T")
 
 
 async function postFetch(json, /*token*/){
-    let path = "https://omsorgapiapi.azure-api.net/Activity";
+    let path = "https://omsorgapi.azurewebsites.net/Activity";
 
     const response = await fetch(path ,{
         method:"post",

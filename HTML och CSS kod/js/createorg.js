@@ -58,7 +58,7 @@ fileInput.addEventListener("change", e =>{
 
 
 async function postFetch(json, /*token*/){
-    let path = "https://omsorgapiapi.azure-api.net/Organization";
+    let path = "https://omsorgapi.azurewebsites.net/Organization";
 
     const response = await fetch(path ,{
         method:"post",

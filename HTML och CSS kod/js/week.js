@@ -74,7 +74,7 @@ window.onload=init;
 
 async function getweek(){
     console.log(weekNumber);
-    let path = "https://omsorgapiapi.azure-api.net/Activity/" + year + "/w/" + weekNumber;
+    let path = "https://omsorgapi.azurewebsites.net/Activity/" + year + "/w/" + weekNumber;
     
     jDay = await getWeekFetch(path);
     console.log(jDay)
