@@ -63,15 +63,15 @@ const et = end_time.split("T")
 
 
 
-async function postFetch(json, /*token*/){
+async function postFetch(json, token){
     let path = "https://omsorgapi.azurewebsites.net/Activity";
 
     const response = await fetch(path ,{
-        method:"post",
+        method:"POST",
         mode:"cors",
-        Headers:{
-            "content-type":"application/json"
-            /*"authorazation":token*/
+        headers:{
+            "content-type":"application/json",
+            "authorazation":token
         },
         body:JSON.stringify(json)
     })

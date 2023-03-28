@@ -87,7 +87,7 @@ async function getweek(){
         //hitta aktiviteter
  
         jDay[i].activities.forEach(element =>{
-            createP(element,jDay[i].day.toLowerCase());
+            createP(element,jDay[i].day.toLowerCase(),month,day);
             }
         
         )
@@ -107,18 +107,25 @@ function createH5(d,m, index){
 }
 
 
-function createP(e,d){
+function createP(e,d,month,day){
    
    
     console.log(d);
     let c = document.getElementById(d).getElementsByTagName("div");
     console.log(c);
     let paragraph = document.createElement("p");
+    let a = c[0].getElementsByTagName("a");
+    console.log(a);
     paragraph.innerHTML = e.start.time;
     paragraph.innerHTML += " "; 
     paragraph.innerHTML += e.org;
 
     c[0].appendChild(paragraph);
+    a[0].style.cursor = "pointer";
+    a[0].href = "information.html?m="+month+"&d="+day;
+    /*a[0].addEventListener("click",event=> {
+        location.href="information.html?m="+month+"&d="+day;
+    })*/
 }
 
 async function getWeekFetch(path){

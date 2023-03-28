@@ -41,6 +41,6 @@ async function login(){
         console.log("error");
         error.innerHTML = "-Felaktig mail/telefon/lösenord";
     } else{
-        error.innerHTML = "Det gick inte att logga in";
+        error.innerHTML = "-Det gick inte att logga in";
     }
 }
