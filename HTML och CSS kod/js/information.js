@@ -343,18 +343,23 @@
 //         "time":st[1]
 //     },
 //let Jsonactivity = json;
-
+let orgId;
 let jsonAct = [];
 
 function init(){
     getActivities();
+
 }
 window.onload = init;
 
 async function getActivities(){
 
-    let path = "https://omsorgapi.azurewebsites.net/Activity/org/2";
-//    let path = "https://omsorgapi.azurewebsites.net/Activity/{year}/{month}/{day}"
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    orgId = Number(urlParams.get("Id"));
+
+    let path = "https://omsorgapi.azurewebsites.net/Activity/org/" + orgId;
 
     jsonAct = await getactFetch(path);
     jsonAct.activities.forEach(element =>{

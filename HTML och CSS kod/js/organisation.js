@@ -1,4 +1,5 @@
 let creatact = document.getElementById("createact");
+let orgId;
 creatact.addEventListener("click",event=> {
     location.href = "uploadinformation.html";
 })
@@ -273,8 +274,7 @@ window.onload = init;
 
 async function getjson(){
 
-    let path = "https://omsorgapiapi.azure-api.net/Activity/org/" + orgId;
-    console.log(path);
+    let path = "https://omsorgapi.azurewebsites.net/Activity/org/" + orgId;
 
 
     jsonOrgTag = await getOrg(path);
@@ -302,16 +302,17 @@ async function getjson(){
         console.log(Orgpos);
     }
 
-    function createdescription(element){
-        let Orgpos1 = document.getElementById("Organisation-description");
+    function createdescription(){
+
+        
+        let Orgpos1 = document.getElementById("text");
         let OrgDescriptionTag = document.createElement("p");
         let OrgDescription = document.createTextNode(jsonOrgTag.description);
         OrgDescriptionTag.appendChild(OrgDescription);
         Orgpos1.appendChild(OrgDescriptionTag);
-        console.log(OrgDescriptionTag);
 
-        Orgpos1.addEventListener("click", event=>{
-            location.href = "information.html?Id="+ element.orgId;
+        OrgDescriptionTag.addEventListener("click", event=>{
+            location.href = "information.html?Id="+ orgId;
         });
     }
 
