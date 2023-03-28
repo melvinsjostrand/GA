@@ -103,7 +103,7 @@ function init(){
     console.log(month);
     console.log(year);
 
-    let path = "https://omsorgapiapi.azure-api.net/Activity/"+ year +"/" + month;
+    let path = "https://omsorgapi.azurewebsites.net/Activity/"+ year +"/" + month;
 
     monthInfo = await getMonthFetch(path);
 
