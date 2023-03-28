@@ -354,7 +354,7 @@ window.onload = init;
 async function getActivities(){
 
     let path = "https://omsorgapi.azurewebsites.net/Activity/org/2";
-
+//    let path = "https://omsorgapi.azurewebsites.net/Activity/{year}/{month}/{day}"
 
     jsonAct = await getactFetch(path);
     jsonAct.activities.forEach(element =>{
