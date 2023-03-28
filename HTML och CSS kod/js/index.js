@@ -65,7 +65,7 @@ let json = [
 
 function init(){
     getOrg();
-    
+    verify();
     
     const queryString = window.location.search;
     console.log(queryString);
@@ -93,6 +93,21 @@ async function getOrg(){
     }
 }
 
+async function verify(){
+    let userverify = "https://omsorgapi.azurewebsites.net/Login/verify";
+    let response = await fetch(userverify, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
+    });
+
+    let role = await response.text();
+    if(role==="valigt");
+    if(role==="admin");
+    console.log(role);
+    return role;
+
+}
 function CreateOrgList(element){
         let Orglist = document.createElement("li");
         let OrgName = document.createTextNode(element.org);
@@ -127,6 +142,8 @@ async function getOrgFetch(path){
     let json = await response.json();
     return json;
 }
+
+
 
 
 
