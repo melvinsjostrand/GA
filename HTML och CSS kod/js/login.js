@@ -20,8 +20,6 @@ async function login(){
     let password = form.elements.password.value;
 
     let path = "https://omsorgapi.azurewebsites.net/Login";
-    //console.log(username);
-    console.log(password);
     const response = await fetch(path ,{
         method:"GET",
         mode:"cors",
