@@ -127,7 +127,12 @@ function CreateOrgList(element){
 
 function orgSection(element){
         let Section = document.createElement("section");
+        
 
+
+
+
+        //skapa färger för organisation section 
         let color = Math.floor(Math.random()*16777215).toString(16);
         let colorCode = "#"+color.toString(16);
         console.log(colorCode);
