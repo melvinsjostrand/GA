@@ -76,8 +76,6 @@ p {
     .sidomeny{
         display: block;
         grid-row: 1;
-        height: 200vh;
-        
     }
     h2{
         text-align: center;
@@ -91,6 +89,7 @@ p {
     border-radius: 50px;
     width: 80%;
     margin:0 auto;
+    height: 50vh;
     }
     .huvudspalt {
         grid-row: 1;

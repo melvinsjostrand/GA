@@ -1,3 +1,5 @@
+let sendfirstsite = document.getElementById("send");
+
 let form;
 
 function init(){
@@ -44,9 +46,13 @@ async function getForm(){
 
     if(password === "yes"){
         favorit = true;
-    }else{
+    }
+
+    else{
         favorit = false;
     }
+
+    
 
     let json={
         "orgCode":account,
@@ -63,6 +69,10 @@ async function getForm(){
         },
         body:JSON.stringify(json)
     });
+
+    if(response.status === 201){
+            location.href = "index.html";
+    }
 
     console.log(response.status);
 

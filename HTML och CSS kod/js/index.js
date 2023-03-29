@@ -71,12 +71,31 @@ function init(){
     console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     orgId = Number(urlParams.get("Id"));
-    
-    
 
-    uppload.addEventListener("click",event=> {
-        location.href = "createorg.html";
+    async function verify(){
+    let userverify = "https://omsorgapi.azurewebsites.net/Login/verify";
+    let response = await fetch(userverify, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
     });
+
+    let role = await response.text();
+    if(role="valigt"){
+        uppload.addEventListener("click",event=> {
+            location.href = "joinorganisation.html";
+        });
+    }
+    else if(role="admin"){
+        uppload.addEventListener("click",event=> {
+            location.href = "createorg.html";
+        });
+    }
+    console.log(role);
+    return role;
+
+}
+
 }
 window.onload = init;
 
@@ -93,21 +112,9 @@ async function getOrg(){
     }
 }
 
-async function verify(){
-    let userverify = "https://omsorgapi.azurewebsites.net/Login/verify";
-    let response = await fetch(userverify, {
-        headers:{
-            "Authorization": localStorage.getItem("GUID")
-        }
-    });
 
-    let role = await response.text();
-    if(role==="valigt");
-    if(role==="admin");
-    console.log(role);
-    return role;
 
-}
+
 function CreateOrgList(element){
         let Orglist = document.createElement("li");
         let OrgName = document.createTextNode(element.org);
