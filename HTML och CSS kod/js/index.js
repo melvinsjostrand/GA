@@ -68,7 +68,6 @@ function init(){
     verify();
     
     const queryString = window.location.search;
-    console.log(queryString);
     const urlParams = new URLSearchParams(queryString);
     orgId = Number(urlParams.get("Id"));
 
@@ -81,17 +80,17 @@ function init(){
     });
 
     let role = await response.text();
-    if(role="valigt"){
+    console.log(role);
+    if(role==="valigt"){
         uppload.addEventListener("click",event=> {
             location.href = "joinorganisation.html";
         });
     }
-    else if(role="admin"){
+    else if(role==="Organisation"){
         uppload.addEventListener("click",event=> {
             location.href = "createorg.html";
         });
     }
-    console.log(role);
     return role;
 
 }
@@ -128,11 +127,20 @@ function CreateOrgList(element){
 
 function orgSection(element){
         let Section = document.createElement("section");
+
+        let color = Math.floor(Math.random()*16777215).toString(16);
+        let colorCode = "#"+color.toString(16);
+        console.log(colorCode);
+        Section.style.backgroundColor = colorCode;
+        
+
         let Title = document.createElement("p");
         let OrgName = document.createTextNode(element.org);
         Title.appendChild(OrgName);
         Section.appendChild(Title);
         organisation.appendChild(Section);
+        
+        
 
         Section.addEventListener("click", event=>{
             location.href = "organisation.html?Id="+ element.orgId;
@@ -147,6 +155,7 @@ async function getOrgFetch(path){
         }
     });
     let json = await response.json();
+
     return json;
 }
 
