@@ -130,14 +130,17 @@ function orgSection(element){
         let Section = document.createElement("section");
         
 
-
+        let img = element.image;
+        console.log(img);
+        Section.style.backgroundImage = img;
+        // Section(img);
 
 
         //skapa färger för organisation section 
-        let color = Math.floor(Math.random()*16777215).toString(16);
-        let colorCode = "#"+color.toString(16);
-        console.log(colorCode);
-        Section.style.backgroundColor = colorCode;
+        // let color = Math.floor(Math.random()*16777215).toString(16);
+        // let colorCode = "#"+color.toString(16);
+        // console.log(colorCode);
+        // Section.style.backgroundColor = colorCode;
         
 
         let Title = document.createElement("p");

@@ -291,7 +291,7 @@ async function getjson(){
     let tN = document.createTextNode(text);
     paragraph.appendChild(tN);
     activities.appendChild(paragraph);
-    }
+     }
 
     function getName() {
         let Orgpos = document.getElementById("organisation-name");
