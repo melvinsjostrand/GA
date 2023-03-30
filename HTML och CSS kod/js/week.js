@@ -84,7 +84,7 @@ async function getweek(){
         month = Number(jDay[i].date.substring(2,4));
         day = Number(jDay[i].date.substring(4));
         createH5(day,month, i);
-        //hitta aktiviteter
+        //hitta aktiviteter 
  
         jDay[i].activities.forEach(element =>{
             createP(element,jDay[i].day.toLowerCase(),month,day);

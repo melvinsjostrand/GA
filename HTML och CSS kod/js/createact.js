@@ -63,15 +63,15 @@ const et = end_time.split("T")
 
 
 
-async function postFetch(json, token){
+async function postFetch(json){
     let path = "https://omsorgapi.azurewebsites.net/Activity";
-
+    console.log( localStorage.getItem("GUID"));
     const response = await fetch(path ,{
         method:"POST",
         mode:"cors",
         headers:{
             "content-type":"application/json",
-            "authorazation":token
+            "authorization":  localStorage.getItem("GUID")
         },
         body:JSON.stringify(json)
     })
@@ -79,6 +79,7 @@ async function postFetch(json, token){
    return response.status;
     
 }
+
 async function GetActFetch(path){
     console.log(localStorage.getItem("GUID"));
     let response = await fetch(path, {
