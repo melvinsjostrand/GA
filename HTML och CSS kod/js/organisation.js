@@ -302,10 +302,9 @@ async function getjson(){
         console.log(Orgpos);
     }
 
-    function createdescription(){
 
-        
-        let Orgpos1 = document.getElementById("text");
+    function createdescription(){
+        let Orgpos1 = document.getElementById("Organisation-description");
         let OrgDescriptionTag = document.createElement("p");
         let OrgDescription = document.createTextNode(jsonOrgTag.description);
         OrgDescriptionTag.appendChild(OrgDescription);
