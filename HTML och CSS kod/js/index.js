@@ -81,14 +81,15 @@ function init(){
 
     let role = await response.text();
     console.log(role);
-    if(role==="Vanlig"){
+
+    if(role==="admin"){  
+        uppload.addEventListener("click",event=> {
+        location.href = "createorg.html";
+        })
+    }
+    else {
         uppload.addEventListener("click",event=> {
             location.href = "joinorganisation.html";
-        });
-    }
-    else if(role==="Organisation"){
-        uppload.addEventListener("click",event=> {
-            location.href = "createorg.html";
         });
     }
     return role;
