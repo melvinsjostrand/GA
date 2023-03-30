@@ -81,14 +81,16 @@ function init(){
     });
 
     let role = await response.text();
-    if(role="valigt"){
-        uppload.addEventListener("click",event=> {
-            location.href = "joinorganisation.html";
-        });
-    }
-    else if(role="admin"){
+    console.log(role);
+    if(role==="admin"){
         uppload.addEventListener("click",event=> {
             location.href = "createorg.html";
+        });
+    
+    }
+    else {
+        uppload.addEventListener("click",event=> {
+            location.href = "joinorganisation.html";
         });
     }
     console.log(role);

@@ -79,3 +79,13 @@ async function postFetch(json, token){
    return response.status;
     
 }
+async function GetActFetch(path){
+    console.log(localStorage.getItem("GUID"));
+    let response = await fetch(path, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
+    });
+    let json = await response.json();
+    return json;
+}

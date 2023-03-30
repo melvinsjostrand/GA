@@ -22,7 +22,7 @@ async function joinOrganization(){
 
     let role = await verify();
 
-    if(role !=="Vanlig"){
+    if(role ==="admin"){
         error.innerHTML = " - Du saknar behörighet";
     }else{
         form.addEventListener("submit", event=>{
@@ -39,7 +39,6 @@ async function getForm(){
     let favorit;
     let account = form.elements.account.value;
     let password = form.elements.password.value;
-    console.log("Hej");
 
     let path = "https://omsorgapi.azurewebsites.net/Organization/user";
         //console.log(username);

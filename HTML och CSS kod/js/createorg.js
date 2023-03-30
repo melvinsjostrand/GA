@@ -61,7 +61,7 @@ async function postFetch(json, /*token*/){
     let path = "https://omsorgapi.azurewebsites.net/Organization";
 
     const response = await fetch(path ,{
-        method:"post",
+        method:"POST",
         mode:"cors",
         Headers:{
             "content-type":"application/json"
