@@ -57,15 +57,15 @@ fileInput.addEventListener("change", e =>{
 });
 
 
-async function postFetch(json, /*token*/){
+async function postFetch(json){
     let path = "https://omsorgapi.azurewebsites.net/Organization";
-
+    console.log( localStorage.getItem("GUID"));
     const response = await fetch(path ,{
         method:"POST",
         mode:"cors",
         Headers:{
-            "content-type":"application/json"
-            /*"authorazation":token*/
+            "content-type":"application/json",
+            "authorization":  localStorage.getItem("GUID")
         },
         body:JSON.stringify(json)
     })
@@ -73,3 +73,15 @@ async function postFetch(json, /*token*/){
    return response.status;
     
 }
+
+async function GetOrgFetch(path){
+    console.log(localStorage.getItem("GUID"));
+    let response = await fetch(path, {
+        headers:{
+            "Authorization": localStorage.getItem("GUID")
+        }
+    });
+    let json = await response.json();
+    return json;
+}
+
