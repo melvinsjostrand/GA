@@ -295,10 +295,11 @@ async function getjson(){
     }
 
     function createlink(){
-        let Link = document.getElementById("link");
-        let Orglink = document.createTextNode(jsonOrgTag.url);
-        console.log(Orglink);
-        Link.appendChild(Orglink);
+        let Link = document.getElementById("link").innerHTML = jsonOrgTag.org;
+
+        Link.addEventListener("click", event=>{
+            location.href = jsonOrgTag.url;
+        });
     }
 
 
