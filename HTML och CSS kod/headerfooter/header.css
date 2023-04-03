@@ -38,10 +38,26 @@ header nav ul{
     list-style-type: none;
 }
 
-@media only screen and (min-width: 820px) {
-   header a {
-        font-size: 3.9em;
+@media only screen and (min-width: 800px) {
+    #mainheader {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
+    #activities{
+        grid-row: 1;
+        padding-bottom: 1em;
+    }
+    #week{
+        grid-row: 1;
+    }
+    #month{
+        grid-row: 2;
+        padding-bottom: 1em;
+    }   
+}
+
+
+@media only screen and (min-width: 1280px) {
     #mainheader {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;

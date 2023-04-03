@@ -281,6 +281,7 @@ async function getjson(){
 
     getName();
     createdescription();
+    createlink();
     jsonOrgTag.activities.forEach(element=>{
         createActivity(element);
     })
@@ -291,7 +292,16 @@ async function getjson(){
     let tN = document.createTextNode(text);
     paragraph.appendChild(tN);
     activities.appendChild(paragraph);
-     }
+    }
+
+    function createlink(){
+        let Link = document.getElementById("link");
+        let Orglink = document.createTextNode(jsonOrgTag.url);
+        console.log(Orglink);
+        Link.appendChild(Orglink);
+    }
+
+
 
     function getName() {
         let Orgpos = document.getElementById("organisation-name");

@@ -82,18 +82,18 @@ function init(){
     let role = await response.text();
     console.log(role);
 
-    if(role==="admin"){  
-        uppload.addEventListener("click",event=> {
-        location.href = "createorg.html";
-        })
-    }
-    else if(role==="Organisation"){
+    if(role==="Vanlig", "Admin"){
         uppload.addEventListener("click",event=> {
             location.href = "joinorganisation.html";
         });
+    
+    }
+    else if(role==="Organisation"){  
+        uppload.addEventListener("click",event=> {
+        location.href = "createorg.html";
+        });
     }
     return role;
-
 }
 
 }
@@ -129,18 +129,18 @@ function CreateOrgList(element){
 function orgSection(element){
         let Section = document.createElement("section");
         
-
-        let img = element.image;
-        console.log(img);
-        Section.style.backgroundImage = img;
+        // Att skapar som backgrund img till section(org)
+        // let img = element.image;
+        // console.log(img);
+        // Section.style.backgroundImage = img;
         // Section(img);
 
 
         //skapa färger för organisation section 
-        // let color = Math.floor(Math.random()*16777215).toString(16);
-        // let colorCode = "#"+color.toString(16);
-        // console.log(colorCode);
-        // Section.style.backgroundColor = colorCode;
+        let color = Math.floor(Math.random()*16777215).toString(16);
+        let colorCode = "#"+color.toString(16);
+        console.log(colorCode);
+        Section.style.backgroundColor = colorCode;
         
 
         let Title = document.createElement("p");
@@ -148,7 +148,6 @@ function orgSection(element){
         Title.appendChild(OrgName);
         Section.appendChild(Title);
         organisation.appendChild(Section);
-        
         
 
         Section.addEventListener("click", event=>{

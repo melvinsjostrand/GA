@@ -15,7 +15,12 @@ main > section {
 .go-back {
     display: flex;
 }
-.go-back > p, #link{
+
+#link {
+    background-color: var(--go-back--color);
+    font-size: 1.5em;
+}
+.go-back > p{
     background-color: var(--go-back--color);
     font-size: 1.5em;
 }

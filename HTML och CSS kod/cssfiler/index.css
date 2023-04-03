@@ -33,6 +33,7 @@ section{
     width: 90%;
     text-align: center;
     background-color: var(--org1--color);
+    cursor: pointer;
 }
 p {  
     font-size: 1em;    
@@ -42,6 +43,7 @@ p {
     width: 10%;
     margin-right: 2em;
     float:right;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 890px) {
@@ -104,5 +106,6 @@ p {
     .sidomeny li{
         height:8vh;
         list-style-type: none;
+        cursor: pointer;
     } 
 }
