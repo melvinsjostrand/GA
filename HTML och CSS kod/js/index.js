@@ -87,7 +87,7 @@ function init(){
         location.href = "createorg.html";
         })
     }
-    else {
+    else if(role==="Organisation"){
         uppload.addEventListener("click",event=> {
             location.href = "joinorganisation.html";
         });
