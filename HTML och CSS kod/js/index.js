@@ -93,6 +93,12 @@ function init(){
         location.href = "createorg.html";
         });
     }
+    if(role==="Admin"){
+        uppload.addEventListener("click",event=> {
+            location.href = "role.html";
+        });
+    
+    }
     return role;
 }
 
