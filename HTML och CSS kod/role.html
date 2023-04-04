@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="headerfooter/header.css">
+    <link rel="stylesheet" href="role.html">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>huvudsida</h1>
+        <nav>
+            <ul id="mainheader">
+            <li id="activities">
+                <a href="index.html">Aktiviteter</a>
+            </li>
+            <li id="week">
+                <a href="week.html">Vecka</a>
+            </li>
+            <li id="month">
+                <a href="month.html">Månad</a>
+            </li>
+            <li id="account">
+                <a href="account.html">Logga in</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <main id="myPopup" class="wrapper">
+            <section class="form-box login">
+                <h2>Gå med i organisation <span id="error"></span>
+                </h2>
+                <form action="#">
+                    <p class="input-box">
+                        <label for="account" >Användare nyckel</label>
+                        <input type="text" name="account" id="account" required>
+                    </p>
+                    <p class="input-box">
+                        <label for="account" >Användare role</label>
+                        <input type="text" name="account" id="account" required>
+                    </p>
+                    <button id="send" type="submit" class="btn" name="login" value="login">Gå med</button>
+                    <div class="login-register">  
+                    </div>
+                </form>
+            </section>
+        </main>
+    </main>
+</body>
+</html>

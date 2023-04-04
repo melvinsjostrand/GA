@@ -276,7 +276,6 @@ async function getjson(){
 
     let path = "https://omsorgapi.azurewebsites.net/Activity/org/" + orgId;
 
-
     jsonOrgTag = await getOrg(path);
 
     getName();
@@ -302,8 +301,6 @@ async function getjson(){
         });
     }
 
-
-
     function getName() {
         let Orgpos = document.getElementById("organisation-name");
         let OrgNameTag = document.getElementsByTagName("h2");
@@ -327,11 +324,6 @@ async function getjson(){
     }
 
 }
-
-
-
- 
-
 
 async function getOrg(path){
     console.log(localStorage.getItem("GUID"));
