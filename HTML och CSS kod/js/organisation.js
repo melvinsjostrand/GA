@@ -280,7 +280,7 @@ async function getjson(){
 
     getName();
     createdescription();
-    createlink();
+    // createlink();
     jsonOrgTag.activities.forEach(element=>{
         createActivity(element);
     })
@@ -293,13 +293,13 @@ async function getjson(){
     activities.appendChild(paragraph);
     }
 
-    function createlink(){
-        let Link = document.getElementById("link").innerHTML = jsonOrgTag.org;
+    // function createlink(){
+    //     let Link = document.getElementById("link").innerHTML = jsonOrgTag.org;
 
-        Link.addEventListener("click", event=>{
-            location.href = jsonOrgTag.url;
-        });
-    }
+    //     Link.addEventListener("click", event=>{
+    //         location.href = jsonOrgTag.url;
+    //     });
+    // }
 
     function getName() {
         let Orgpos = document.getElementById("organisation-name");
