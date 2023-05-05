@@ -82,7 +82,7 @@ function init(){
     let role = await response.text();
     console.log(role);
 
-    if(role==="Vanlig", "Admin"){
+    if(role==="Vanlig"){
         uppload.addEventListener("click",event=> {
             location.href = "joinorganisation.html";
         });
