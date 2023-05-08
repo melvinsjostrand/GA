@@ -35,6 +35,9 @@ async function getFormData(){
         let status = await postFetch(Json);
 
         console.log(status);
+        if(status = 201){
+            location.href= "index.html";
+        }
 
 }
 

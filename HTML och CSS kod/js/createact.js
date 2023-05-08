@@ -1,6 +1,6 @@
 let form;
 
-const backurl = "https://omsapp.te-vxo.se/index.html";
+// const backurl = "https://omsapp.te-vxo.se/index.html";
 
 function init(){
 
@@ -56,7 +56,7 @@ const et = end_time.split("T")
     
         let status = await postFetch(Json);
 
-        console.log(status);
+        console.log(status)
 
 }
 
@@ -75,9 +75,10 @@ async function postFetch(json){
         },
         body:JSON.stringify(json)
     })
-
-   return response.status;
-    
+    if(response.status === 201){
+        location.href = "index.html";
+    }
+    return response.status;
 }
 
 async function GetActFetch(path){

@@ -277,10 +277,11 @@ async function getjson(){
     let path = "https://omsorgapi.azurewebsites.net/Activity/org/" + orgId;
 
     jsonOrgTag = await getOrg(path);
-
+    console.log(jsonOrgTag.orgCode);
     getName();
+    getcode();
     createdescription();
-    // createlink();
+    createlink();
     jsonOrgTag.activities.forEach(element=>{
         createActivity(element);
     })
@@ -291,15 +292,25 @@ async function getjson(){
     let tN = document.createTextNode(text);
     paragraph.appendChild(tN);
     activities.appendChild(paragraph);
+
+    paragraph.addEventListener("click", event=>{
+        location.href = "information.html?Id="+ orgId;
+    });
     }
 
-    // function createlink(){
-    //     let Link = document.getElementById("link").innerHTML = jsonOrgTag.org;
+    function createlink(){
+        let Link = document.getElementById("link");
+        let orgLink = document.createTextNode(jsonOrgTag.url);
+        console.log(orgLink)
+        Link.appendChild(orgLink);
+    }
 
-    //     Link.addEventListener("click", event=>{
-    //         location.href = jsonOrgTag.url;
-    //     });
-    // }
+    function getcode(){
+        let Codetext = document.getElementById("code");
+        let Orgkey = document.createTextNode(jsonOrgTag.orgCode);
+        Codetext.appendChild(Orgkey);
+
+    }
 
     function getName() {
         let Orgpos = document.getElementById("organisation-name");
@@ -317,10 +328,6 @@ async function getjson(){
         let OrgDescription = document.createTextNode(jsonOrgTag.description);
         OrgDescriptionTag.appendChild(OrgDescription);
         Orgpos1.appendChild(OrgDescriptionTag);
-
-        OrgDescriptionTag.addEventListener("click", event=>{
-            location.href = "information.html?Id="+ orgId;
-        });
     }
 
 }

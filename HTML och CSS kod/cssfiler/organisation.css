@@ -20,6 +20,12 @@ main > section {
     background-color: var(--go-back--color);
     font-size: 1.5em;
 }
+#code {
+    background-color: var(--go-back--color);
+    font-size: 1.5em;
+    margin-right: 2rem;
+    margin-left: 12rem;
+}
 .go-back > p{
     background-color: var(--go-back--color);
     font-size: 1.5em;
@@ -57,9 +63,14 @@ img {
         margin-right: 2rem;
         margin-left: 12rem;
     }
+    #code {
+        margin-right: 2rem;
+        margin-left: 12rem;
+    }
     #Organisation-description {
         grid-column: 2;
     }
+
     #organisation-name {
         margin-bottom: 5vw;
     }
@@ -84,7 +95,7 @@ img {
     #text  {
         grid-column: 2;
         background-color: var(--go-back--color);
-        overflow: scroll;
+        overflow: auto;
         height: 30vh;
     }
     section > img {
