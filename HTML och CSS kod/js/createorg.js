@@ -8,7 +8,7 @@ function init(){
 
     form.addEventListener("submit", event=>{
         getFormData();
-        // location.href = backurl;
+        //location.href = backurl;
         event.preventDefault();
     })
 
@@ -19,7 +19,7 @@ window.onload = init;
 async function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
-    let image = form.elements.fileinput.files;
+    //let image = form.elements.fileinput.files;
 
         console.log(description);
         console.log(org);
@@ -27,7 +27,7 @@ async function getFormData(){
         Json={            
             "org":org,
             "description":description,
-            "image":image,
+            "image":srcdata,
         }
 
         console.log(Json);
@@ -36,8 +36,11 @@ async function getFormData(){
 
         console.log(status);
         if(status === 201){
-            location.href = "index.html";
-        }
+			console.log("Organisationen skapad");
+			location.href = "index.html";
+		}else{
+			console.log("Det gick inte att skapa organisationen");
+		}
 
 }
 

@@ -134,15 +134,22 @@ function CreateOrgList(element){
 
 function orgSection(element){
         let Section = document.createElement("section");
-        // Att skapar som backgrund img till 
-        let img = element.image;
-        console.log(img);
-        Section.style.backgroundImage = img;
-        // skapa färger för organisation section 
+         
+
+        if(jsonOrg.image = element.image){
+        // Att skapar som backgrund img till
+        let OrgImg = element.image;
+        console.log(OrgImg);
+        Section.style.backgroundImage = "url('OrgImg')";
+        }
+        else {
+          // skapa färger för organisation section 
         let color = Math.floor(Math.random()*16777215).toString(16);
         let colorCode = "#"+color.toString(16);
-        console.log(colorCode);
-        Section.style.backgroundColor = colorCode;
+        Section.style.backgroundColor = colorCode;  
+        }
+        
+        
         
 
         let Title = document.createElement("p");
