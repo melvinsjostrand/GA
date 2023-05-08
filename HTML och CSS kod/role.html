@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="headerfooter/header.css">
-    <link rel="stylesheet" href="role.html">
+    <link rel="stylesheet" href="cssfiler/role.css">
+    <script src="./js/role.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -28,26 +29,21 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <main id="myPopup" class="wrapper">
+        <main>
             <section class="form-box login">
-                <h2>Gå med i organisation <span id="error"></span>
-                </h2>
+                <h2>Ändra roler</h2>
                 <form action="#">
                     <p class="input-box">
-                        <label for="account" >Användare nyckel</label>
+                        <label for="account" >Användare identitet</label>
                         <input type="text" name="account" id="account" required>
                     </p>
                     <p class="input-box">
-                        <label for="account" >Användare role</label>
-                        <input type="text" name="account" id="account" required>
+                        <label for="role" >Användare role</label>
+                        <input type="text" name="role" id="role" required>
                     </p>
-                    <button id="send" type="submit" class="btn" name="login" value="login">Gå med</button>
-                    <div class="login-register">  
-                    </div>
+                    <button id="send" type="submit" class="btn" name="login" value="login">Ändra</button>
                 </form>
             </section>
         </main>
-    </main>
 </body>
 </html>
