@@ -8,7 +8,7 @@ function init(){
 
     form.addEventListener("submit", event=>{
         getFormData();
-        location.href = backurl;
+        // location.href = backurl;
         event.preventDefault();
     })
 
@@ -19,7 +19,7 @@ window.onload = init;
 async function getFormData(){
     let org = form.elements.createorg.value;
     let description = form.elements.desc.value;
-    //let image = form.elements.fileinput.files;
+    let image = form.elements.fileinput.files;
 
         console.log(description);
         console.log(org);
@@ -27,7 +27,7 @@ async function getFormData(){
         Json={            
             "org":org,
             "description":description,
-            "image":""
+            "image":image,
         }
 
         console.log(Json);
@@ -35,8 +35,8 @@ async function getFormData(){
         let status = await postFetch(Json);
 
         console.log(status);
-        if(status = 201){
-            location.href= "index.html";
+        if(status === 201){
+            location.href = "index.html";
         }
 
 }
@@ -66,7 +66,7 @@ async function postFetch(json){
     const response = await fetch(path ,{
         method:"POST",
         mode:"cors",
-        Headers:{
+        headers:{
             "content-type":"application/json",
             "authorization":  localStorage.getItem("GUID")
         },
