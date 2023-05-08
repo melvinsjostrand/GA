@@ -1,8 +1,17 @@
-json =[ 
-    {
-    "userId": "int",
-    "role": "int (1-3, 1: Vanlig, 2: Organisation, 3: Admin)"
-    }
-]
 
+function init(){
+    roll();
+    async function roll(){
+            let rol = "https://omsorgapi.azurewebsites.net/Login/management";
+            let response = await fetch(rol, {
+                headers:{
+                    "Authorization": localStorage.getItem("GUID")
+                }
+            });
+            
+            console.log(response);
 
+        }
+    
+}
+window.onload = init; 
