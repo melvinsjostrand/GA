@@ -16,7 +16,7 @@ async function getActivities(){
     let month = Number(urlParams.get("m"));
     let day = Number(urlParams.get("d"));
 
-    let path = "https://omsorgapi.azurewebsites.net/Activity/23/" + month+"/"+day;
+    let path = "https://omsorgapi.azurewebsites.net/Activity/org/56/";
     console.log(path);
     jsonAct = await getactFetch(path);
     jsonAct.activities.forEach(element =>{
@@ -25,14 +25,7 @@ async function getActivities(){
     })
 }
 
-
-
-// function day(element){
-
-// }
-
 function daycalendar(element)  {
-    console.log(element);
     let calendar = document.getElementsByClassName("Dag-Infokalender");
     let paragraph = document.createElement("p");
     let orgplustime = element.start.time + " " + element.org;
@@ -53,7 +46,7 @@ function createSection(element){
 
 
     let paragraph = document.createElement("p");
-    let t = element.start.time + " " + element.info;
+    let t = element.start.time + " " + element.info + " " + element.start.date;
     let infoN = document.createTextNode(t);
     paragraph.appendChild(infoN);
 
