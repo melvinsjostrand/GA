@@ -22,7 +22,7 @@ async function joinOrganization(){
 
     let role = await verify();
 
-    if(role ==="Vanlig"){
+    if(role ==="Organisation"){
         error.innerHTML = " - Du saknar behörighet";
     }else{
         form.addEventListener("submit", event=>{

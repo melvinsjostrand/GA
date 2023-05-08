@@ -121,7 +121,7 @@ function init(){
  function createSection(cont) {
     let section = document.createElement("section");
     let paragraph = document.createElement("p");
-    let date = cont + "/" + month
+    let date = cont + "/" + month;
     let text = document.createTextNode(date);
     paragraph.appendChild(text);
     section.appendChild(paragraph);

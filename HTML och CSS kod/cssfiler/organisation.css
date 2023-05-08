@@ -19,7 +19,12 @@ main > section {
 #link {
     background-color: var(--go-back--color);
     font-size: 1.5em;
+    text-decoration: none;
 }
+a {
+    color: black;
+}
+
 #code {
     background-color: var(--go-back--color);
     font-size: 1.5em;

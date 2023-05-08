@@ -33,6 +33,7 @@ section {
     margin: 5px;
     padding: 10px;
     font-size: 10px;
+    overflow: auto;
 }
 p{
     border-color: var(--color--circle);

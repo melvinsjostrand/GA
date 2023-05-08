@@ -267,6 +267,27 @@ function init() {
 
     activities = document.getElementById("text");
     getjson();
+    verify();
+
+    async function verify(){
+        let userverify = "https://omsorgapi.azurewebsites.net/Login/verify";
+        let response = await fetch(userverify, {
+            headers:{
+                "Authorization": localStorage.getItem("GUID")
+            }
+        });
+    
+        let role = await response.text();
+        console.log(role);
+    
+        if(role==="Vanlig"){
+            document.getElementById("createact").style.display = "none";
+        }
+        else if(role==="Organisation", "Admin"){  
+            document.getElementById("createact").style.display = "block";
+        }
+        return role;
+    }
 }
 window.onload = init;
 
@@ -303,6 +324,8 @@ async function getjson(){
         let orgLink = document.createTextNode(jsonOrgTag.url);
         console.log(orgLink)
         Link.appendChild(orgLink);
+        Link.href = jsonOrgTag.url;
+
     }
 
     function getcode(){

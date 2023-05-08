@@ -15,8 +15,9 @@ async function getActivities(){
     const urlParams = new URLSearchParams(queryString);
     let month = Number(urlParams.get("m"));
     let day = Number(urlParams.get("d"));
+    let orgId = Number(urlParams.get("Id"))
 
-    let path = "https://omsorgapi.azurewebsites.net/Activity/org/56/";
+    let path = "https://omsorgapi.azurewebsites.net/Activity/org/"+ orgId + "/";
     console.log(path);
     jsonAct = await getactFetch(path);
     jsonAct.activities.forEach(element =>{
