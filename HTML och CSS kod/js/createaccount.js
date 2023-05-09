@@ -54,7 +54,9 @@ async function postFetch(json, /*token*/){
         },
         body:JSON.stringify(json)
     })
-
+    if(response.status === 201){
+        location.href = "index.html";
+    }
    return response.status;
     
 }

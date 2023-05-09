@@ -84,6 +84,7 @@ function init(){
     if(role === "Du behöver vara inloggad!"){
         location.href = "account.html";
     }
+    
 
     if(role==="Vanlig"){
         uppload.addEventListener("click",event=> {
@@ -121,7 +122,6 @@ async function getOrg(){
         CreateOrgList(element);
     }
 }
-
 
 
 
@@ -175,11 +175,15 @@ async function getOrgFetch(path){
             "Authorization": localStorage.getItem("GUID")
         }
     });
+    if(response.status === 404){
+        location.href = "joinorganisation.html";
+        }
     let json = await response.json();
 
     return json;
+    
 }
-
+    
 
 
 
