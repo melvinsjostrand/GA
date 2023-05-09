@@ -96,7 +96,7 @@ function init(){
         location.href = "createorg.html";
         });
     }
-    
+
     if(role==="Admin"){
         uppload.addEventListener("click",event=> {
             location.href = "role.html";
@@ -140,7 +140,7 @@ function orgSection(element){
         let Section = document.createElement("section");
          
 
-        if(jsonOrg.image = element.image){
+        if(jsonOrg.image == element.image){
         // Att skapar som backgrund img till
         let OrgImg = element.image;
         console.log(OrgImg);
