@@ -81,6 +81,9 @@ function init(){
 
     let role = await response.text();
     console.log(role);
+    if(role === "Du behöver vara inloggad!"){
+        location.href = "account.html";
+    }
 
     if(role==="Vanlig"){
         uppload.addEventListener("click",event=> {
@@ -93,6 +96,7 @@ function init(){
         location.href = "createorg.html";
         });
     }
+    
     if(role==="Admin"){
         uppload.addEventListener("click",event=> {
             location.href = "role.html";
