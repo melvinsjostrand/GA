@@ -106,7 +106,13 @@ function init(){
     }
     return role;
 }
+if(localStorage.getItem("GUID") === "")
+{
+    //Logga in
+    location.href= "account.html";
 
+}
+createA("Logga ut");
 }
 window.onload = init;
 

@@ -5,7 +5,13 @@ function init(){
         roll();
         event.preventDefault();
     })
-    
+    if(localStorage.getItem("GUID") === "")
+    {
+        //Logga in
+        location.href= "account.html";
+
+    }
+    createA("Logga ut");
 
    
     

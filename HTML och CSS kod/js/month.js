@@ -2,52 +2,7 @@ let month;
 let datum;
 let year;
   
-// let json=[
-//     {
-//         "date": "230301",
-//         "day": "Onsdag",
-//         "activities": [
-//             {
-//                 "actId": "",
-//                 "orgId": "",
-//                 "org": "OmsFritid",
-//                 "act": "Bowling med Alexandru",
-//                 "info": "Bowlinghallen",
-//                 "place": "Bowlinghallen",
-//                 "start": {
-//                     "date": "230301",
-//                     "time": "16:00"
-//                 },
-//                 "end": {
-//                     "date": "230301",
-//                     "time": "18:00"
-//                 }
-//             }
-//         ]
-//     },
-//     {
-//         "date": "230302",
-//         "day": "Torsdag",
-//         "activities": [
-//             {
-//                 "actId": "",
-//                 "orgId": "",
-//                 "org": "OmsFritid",
-//                 "act": "Pizza med Melvin",
-//                 "info": "Pizza på pizzerian",
-//                 "place": "Pizzerian",
-//                 "start": {
-//                     "date": "230302",
-//                     "time": "19:00"
-//                 },
-//                 "end": {
-//                     "date": "230302",
-//                     "time": "20:00"
-//                 }
-//             }
-//         ]
-//     }
-// ]
+
  
 const m = ["Januari","Februari","Mars","April","May","Juni","Juli","Augusti","September","Oktober","November","December"];
 let monthInfo=[];
@@ -94,6 +49,13 @@ function init(){
 
         location.href = "month.html?y=" + year+ "&m=" + month;
     })  
+    if(localStorage.getItem("GUID") === "")
+    {
+        //Logga in
+        location.href= "account.html";
+
+    }
+    createA("Logga ut");
 }
  window.onload = init;
 
