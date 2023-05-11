@@ -1,6 +1,6 @@
 #mainheader{
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-content: center;
     justify-items: center;
 }
@@ -34,6 +34,9 @@ header a:active {
     padding-bottom: 1em;
 }
 
+#account{
+    grid-row: 4;
+}
 header nav ul{
     list-style-type: none;
 }
