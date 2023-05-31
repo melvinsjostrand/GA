@@ -1,42 +1,42 @@
-
-body{
-    width:97vw;
+body {
+    width: 97vw;
 }
 
-.wrapper{
+.wrapper {
     position: relative;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     height: 740px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    justify-self: center;
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 20px;
 }
 
-
-.wrapper .form-box{
+.wrapper .form-box {
     width: 100%;
     padding: 40px;
 }
-.form-box h2{
-    font-size: 5em;
+
+.form-box h2 {
+    font-size: 3em;
     color: #162938;
     text-align: center;
 }
 
-
-.input-box{
-    font-size: 2em;
+.input-box {
+    font-size: 1.5em;
 }
-.btn{
-    width: 80%;
+
+.btn {
+    width: 100%;
     height: 45px;
     background: #162938;
-    border:none;
+    border: none;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
@@ -44,21 +44,45 @@ body{
     color: #fff;
     font-weight: 500;
 }
-.login-register{
-    font-size: 2em;
+
+.login-register {
+    font-size: 1.5em;
     color: #162938;
     font-weight: 500;
     margin: 25px 0 10px;
 }
-.login-register p a{
+
+.login-register p a {
     color: #162938;
     text-decoration: none;
     font-weight: 600;
 }
-span{
+
+span {
     color: red;
 }
 
 #mainheader {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+}
+
+/* Responsiva stilar */
+@media (max-width: 768px) {
+    .form-box h2 {
+        font-size: 2em;
+    }
+
+    .input-box {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 0.8em;
+    }
+
+    .login-register {
+        font-size: 1em;
+    }
 }
