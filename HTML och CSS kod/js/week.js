@@ -66,8 +66,15 @@ function init(){
             }
         })
     }*/
+    if(localStorage.getItem("GUID") === "")
+    {
+        //Logga in
+        location.href= "account.html";
 
+    }
+    createA("Logga ut");
 }
+
 
 window.onload=init;
 
