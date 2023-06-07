@@ -396,7 +396,6 @@ async function getOrg(path){
 }
 
 
-
 async function deleteOrganization() {
     console.log(orgId);
     const tabortorg = "https://omsorgapi.azurewebsites.net/Organization";
