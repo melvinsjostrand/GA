@@ -55,13 +55,13 @@ function init(){
     }
     return role;
 }
-if(localStorage.getItem("GUID") === "")
-{
-    //Logga in
-    location.href= "account.html";
+    if(localStorage.getItem("GUID") === "")
+    {
+        //Logga in
+        location.href= "account.html";
 
-}
-createA("Logga ut");
+    }
+
 }
 window.onload = init;
 
@@ -69,7 +69,6 @@ window.onload = init;
 async function getOrg(){
 
     let path = "https://omsorgapi.azurewebsites.net/Organization/user";
-
     jsonOrg = await getOrgFetch(path);
     for(let i=0;i<jsonOrg.length;i++){
         let element = jsonOrg[i];
@@ -131,13 +130,15 @@ async function getOrgFetch(path){
         }
     });
     if(response.status === 404){
-        location.href = "joinorganisation.html";
+        
         }
     let json = await response.json();
 
     return json;
     
 }
+
+
     
 
 

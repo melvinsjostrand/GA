@@ -42,8 +42,23 @@ async function roll(){
         body: JSON.stringify(json)
     });
     console.log(response.status);
+
+    if (response.status === 200) {
+        let userInfo = await fetchUserInfo(userId);
+        let username = userInfo.username;
+
+        console.log("Användarnamn:", username);
     
-    if(response.status === 200){
-        location.href = "index.html";
+    }
 }
-}
+
+async function fetchUserInfo(userId) {
+    let url = `https://omsorgapi.azurewebsites.net/Users/` + userId;
+    let response = await fetch(url, {
+      headers: {
+        "Authorization": localStorage.getItem("GUID"),
+      }
+    });
+    let json = await response.json();
+    return json;
+  }

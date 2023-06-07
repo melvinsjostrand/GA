@@ -1,36 +1,20 @@
-function init(){
-    if(localStorage.getItem("GUID"))
-    {
-        createA("logga in")
-        //Logga in
-        location.href= "account.html";
+function init() {
+    let li = document.getElementById("account");
+    console.log(li);
 
-    }else{
-    createA("Logga ut");
-    location.href = "logout.html";
+    if (localStorage.getItem("GUID")) {
+        createLink(li, "Logga ut", "logout.html");
+    } else {
+        createLink(li, "Logga in", "account.html");
+    }
 }
 
+window.onload = init;
+
+function createLink(li, text, href) {
+    let a = document.createElement("a");
+    a.innerText = text;
+    a.href = href;
+    li.innerHTML = "";
+    li.appendChild(a);
 }
-    window.onload=init;
-
-    function createA(text)
-        {
-        let li = document.getElementById("account");
-        console.log(li);
-        let a = document.createElement("a");
-
-        a.innerHTML = text;
-        li.appendChild(a);
-
-        }
-        async function getWeekFetch(path){
-            console.log(localStorage.getItem("GUID"));
-            let response = await fetch(path, {
-                headers:{
-                    "Authorization": localStorage.getItem("GUID")
-                }
-            });
-            let json = await response.json();
-            return json;
-        }
-        

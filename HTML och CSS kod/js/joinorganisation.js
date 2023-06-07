@@ -96,7 +96,7 @@ async function getForm(){
     }*/
 }
     
-
+console.log(role);
 
 async function verify(){
     let path = "https://omsorgapi.azurewebsites.net/Login/verify";

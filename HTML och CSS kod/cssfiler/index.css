@@ -38,12 +38,16 @@ section{
 p {  
     font-size: 1em;    
 }
-
+.icon-container {
+    position: fixed;
+    top: 95%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
 #upploadbutton {
-    width: 10%;
-    margin-right: 2em;
-    float:right;
-    cursor: pointer;
+    height: 100px;
+    width: 100px;
 }
 
 @media only screen and (min-width: 650px){
@@ -71,8 +75,8 @@ p {
         row-gap: 1em;
     }
     #upploadbutton {
-        width: 6%;
-        margin-right: 3rem;
+        height: 100px;
+        width: 100px;
     }
 }
 @media only screen and (min-width: 1080px) {
