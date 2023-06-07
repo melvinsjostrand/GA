@@ -268,7 +268,7 @@ function init() {
     activities = document.getElementById("text");
     getjson();
     verify();
-
+    icondelete()
     async function verify(){
         let userverify = "https://omsorgapi.azurewebsites.net/Login/verify";
         let response = await fetch(userverify, {
@@ -282,9 +282,14 @@ function init() {
     
         if(role==="Vanlig"){
             document.getElementById("createact").style.display = "none";
+            document.getElementById("delete").style.display = "none";
         }
-        else if(role==="Organisation", "Admin"){  
+        else if(role==="Organisation"){  
             document.getElementById("createact").style.display = "block";
+            document.getElementById("delete").style.display = "none";
+        }
+        else if(role === "Admin"){  
+            document.getElementById("delete").style.display = "block";
         }
         return role;
     }
@@ -294,9 +299,26 @@ function init() {
         location.href= "account.html";
 
     }
+
+    function icondelete(){
+        let deleteIcon = document.getElementById("delete");
+        deleteIcon.addEventListener("click", (event) => {
+            
+            event.stopPropagation();
+            if (confirm("Är du säker på att du vill ta bort organisationen?")) {  
+              deleteOrganization();
+            }
+        });
+    }
+
     createA("Logga ut");
+
+    
+
 }
 window.onload = init;
+
+
 
 
 
@@ -371,4 +393,38 @@ async function getOrg(path){
     });
     let json = await response.json();
     return json;
+}
+
+
+
+async function deleteOrganization() {
+    console.log(orgId);
+    const tabortorg = "https://omsorgapi.azurewebsites.net/Organization";
+  
+    let requestdeleteorg = {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": localStorage.getItem("GUID")
+            
+          },
+          body: JSON.stringify({ orgId: orgId }),
+        };
+
+    try {
+      
+        let response = await fetch(tabortorg, requestdeleteorg);
+
+        if (response.ok) {
+        location.href = "index.html";
+        } 
+        else {
+            console.log("Misslyckades att ta bort organisationen.");
+        }
+    } 
+
+    
+    catch (error) {
+      console.log("Ett fel uppstod vid försök att ta bort organisationen:", error);
+    }
 }
