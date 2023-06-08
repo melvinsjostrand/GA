@@ -49,13 +49,22 @@ function init(){
 
         location.href = "month.html?y=" + year+ "&m=" + month;
     })  
-    if(localStorage.getItem("GUID") === "")
-    {
-        //Logga in
-        location.href= "account.html";
+    // if(localStorage.getItem("GUID") === "")
+    // {
+    //     //Logga in
+    //     location.href= "account.html";
 
+    // }
+    // createA("Logga ut");
+
+    let li = document.getElementById("account");
+    console.log(li);
+
+    if (localStorage.getItem("GUID")) {
+        createLink(li, "Logga ut", "logout.html");
+    } else {
+        createLink(li, "Logga in", "account.html");
     }
-    createA("Logga ut");
 }
  window.onload = init;
 
@@ -117,3 +126,10 @@ async function getMonthFetch(path){
     return json;
 }
 
+function createLink(li, text, href) {
+    let a = document.createElement("a");
+    a.innerText = text;
+    a.href = href;
+    li.innerHTML = "";
+    li.appendChild(a);
+}

@@ -15,7 +15,15 @@ function init() {
         let role = await response.text();
         console.log(role);
     }
+    let li = document.getElementById("account");
+    console.log(li);
 
+    if (localStorage.getItem("GUID")) {
+        createLink(li, "Logga ut", "logout.html");
+    } else {
+        createLink(li, "Logga in", "account.html");
+    }
+    
 }
 
 window.onload = init;
@@ -109,4 +117,12 @@ async function deleteActivity(actId) {
     } catch (error) {
         console.log("Ett fel uppstod vid försök att ta bort aktiviteten:", error);
     }
+}
+
+function createLink(li, text, href) {
+    let a = document.createElement("a");
+    a.innerText = text;
+    a.href = href;
+    li.innerHTML = "";
+    li.appendChild(a);
 }

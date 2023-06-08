@@ -42,12 +42,12 @@ function init() {
         }
         return role;
     }
-    if(localStorage.getItem("GUID") === "")
-    {
-        //Logga in
-        location.href= "account.html";
+    // if(localStorage.getItem("GUID") === "")
+    // {
+    //     //Logga in
+    //     location.href= "account.html";
 
-    }
+    // }
 
     function icondelete(){
         let deleteIcon = document.getElementById("delete");
@@ -60,9 +60,16 @@ function init() {
         });
     }
 
-    createA("Logga ut");
+    // createA("Logga ut");
 
-    
+    let li = document.getElementById("account");
+    console.log(li);
+
+    if (localStorage.getItem("GUID")) {
+        createLink(li, "Logga ut", "logout.html");
+    } else {
+        createLink(li, "Logga in", "account.html");
+    }
 
 }
 window.onload = init;
@@ -175,4 +182,12 @@ async function deleteOrganization() {
     catch (error) {
       console.log("Ett fel uppstod vid försök att ta bort organisationen:", error);
     } 
+}
+
+function createLink(li, text, href) {
+    let a = document.createElement("a");
+    a.innerText = text;
+    a.href = href;
+    li.innerHTML = "";
+    li.appendChild(a);
 }

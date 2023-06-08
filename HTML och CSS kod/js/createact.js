@@ -12,6 +12,13 @@ function init(){
         event.preventDefault();
     })
 
+    let li = document.getElementById("account");
+    console.log(li);
+    if (localStorage.getItem("GUID")) {
+        createLink(li, "Logga ut", "logout.html");
+    } else {
+        createLink(li, "Logga in", "account.html");
+    }
 }
 
 window.onload = init;
@@ -58,8 +65,18 @@ const et = end_time.split("T")
 
         console.log(status)
 
-}
+    //     let li = document.getElementById("account");
+    // console.log(li);
 
+    
+}
+function createLink(li, text, href) {
+    let a = document.createElement("a");
+    a.innerText = text;
+    a.href = href;
+    li.innerHTML = "";
+    li.appendChild(a);
+}
 
 
 
@@ -91,3 +108,4 @@ async function GetActFetch(path){
     let json = await response.json();
     return json;
 }
+
